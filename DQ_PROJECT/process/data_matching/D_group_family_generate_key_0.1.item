@@ -161,7 +161,7 @@
       <elementValue elementRef="PRE_ALGO" value="removeDMAndUpperCase"/>
       <elementValue elementRef="PRE_VALUE" value=""/>
       <elementValue elementRef="KEY_ALGO" value="first_N_Char_EW"/>
-      <elementValue elementRef="KEY_VALUE" value="1"/>
+      <elementValue elementRef="KEY_VALUE" value="2"/>
       <elementValue elementRef="POST_ALGO" value="NON_ALGO"/>
       <elementValue elementRef="POST_VALUE" value=""/>
       <elementValue elementRef="PRECOLUMN" value="postal_code"/>
@@ -332,14 +332,28 @@
     <nodeData xsi:type="tdqmatching:MatchingData">
       <ruleMatchers>
         <joinkeys>
-          <columnMap key="CUSTOM_MATCHER" value="&quot;&quot;"/>
-          <columnMap key="INPUT_COLUMN" value="lname"/>
-          <columnMap key="CONFIDENCE_WEIGHT" value="1"/>
           <columnMap key="MATCHING_TYPE" value="Jaro-Winkler"/>
+          <columnMap key="SURVIVORSHIP_FUNCTION" value="MostCommon"/>
           <columnMap key="HANDLE_NULL" value="nullMatchNull"/>
+          <columnMap key="ATTRIBUTE_THRESHOLD" value="0.7"/>
+          <columnMap key="CONFIDENCE_WEIGHT" value="1"/>
+          <columnMap key="INPUT_COLUMN" value="lname"/>
+          <columnMap key="CUSTOM_MATCHER" value="&quot;&quot;"/>
+          <columnMap key="TOKENIZATION_TYPE" value="No"/>
+        </joinkeys>
+        <joinkeys>
+          <columnMap key="MATCHING_TYPE" value="Jaro-Winkler"/>
+          <columnMap key="SURVIVORSHIP_FUNCTION" value="MostCommon"/>
+          <columnMap key="HANDLE_NULL" value="nullMatchNull"/>
+          <columnMap key="ATTRIBUTE_THRESHOLD" value="0.3"/>
+          <columnMap key="CONFIDENCE_WEIGHT" value="1"/>
+          <columnMap key="INPUT_COLUMN" value="state_province"/>
+          <columnMap key="CUSTOM_MATCHER" value="&quot;&quot;"/>
+          <columnMap key="TOKENIZATION_TYPE" value="No"/>
+          <columnMap key="PARAMETER" value=","/>
         </joinkeys>
         <matchParamMap key="INTERVAL_RULE" value="0.95"/>
-        <matchParamMap key="MATCHING_ALGORITHM" value="Simple VSR Matcher"/>
+        <matchParamMap key="MATCHING_ALGORITHM" value="TSWOOSH_MATCHER"/>
       </ruleMatchers>
     </nodeData>
   </node>
