@@ -2,6 +2,8 @@
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" name="Default"/>
   <parameters>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0" show="false"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value="" show="false"/>
     <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" value="" show="false"/>
     <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" value="" show="false"/>
@@ -113,4 +115,181 @@
     <routinesParameter id="_jFtsAOJpEeCmJNdA0HkfKA" name="A2_standardizeaddressTstandardizerow_1"/>
     <routinesParameter id="_wU5qIOJpEeCmJNdA0HkfKA" name="Products_parsingTstandardizerow_1"/>
   </parameters>
+  <node componentName="tUniservBTGeneric" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="384" posY="160">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tUniservBTGeneric_1" show="false"/>
+    <elementParameter field="TEXT" name="HOSTNAME" value="&quot;localhost&quot;"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;9845&quot;"/>
+    <elementParameter field="TEXT" name="MANDANT" value="&quot;server&quot;"/>
+    <elementParameter field="TEXT" name="USERNAME" value="&quot;test&quot;"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="8DG0mZgdk10="/>
+    <elementParameter field="TEXT" name="JOB_DIR" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="JOB_NAME" value="&quot;&quot;"/>
+    <elementParameter field="FILE" name="PATH_JOBDEF" value=""/>
+    <elementParameter field="DIRECTORY" name="TEMP_DIR" value="&quot;C:/Talend/6.3.1/studio/workspace&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="IN_MODE" value="Job"/>
+    <elementParameter field="TEXT" name="IN_DIR" value="&quot;input&quot;"/>
+    <elementParameter field="TEXT" name="IN_FILENAME" value="&quot;input.txt&quot;"/>
+    <elementParameter field="TEXT" name="IN_HEADER_COUNT" value="0"/>
+    <elementParameter field="TEXT" name="IN_FIELD_SEP" value="&quot;;&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="OUT_MODE" value="Job"/>
+    <elementParameter field="TEXT" name="OUT_DIR" value="&quot;output&quot;"/>
+    <elementParameter field="TEXT" name="OUT_FILENAME" value="&quot;output.txt&quot;"/>
+    <elementParameter field="TEXT" name="OUT_HEADER_COUNT" value="1"/>
+    <elementParameter field="TEXT" name="OUT_FIELD_SEP" value="&quot;;&quot;"/>
+    <elementParameter field="TEXT" name="OUT_FILETEMP" value="&quot;tempOutputUniserv&quot;" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tUniservBTGeneric_1"/>
+    <metadata connector="OUTPUT_SCHEMA" name="OUTPUT_SCHEMA"/>
+  </node>
+  <node componentName="tUniservRTConvertName" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="384" posY="288">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tUniservRTConvertName_1" show="false"/>
+    <elementParameter field="LABEL" name="NOTE" value="Schema for the main output"/>
+    <elementParameter field="TEXT" name="HOSTNAME" value="&quot;localhost&quot;"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;1881&quot;"/>
+    <elementParameter field="TEXT" name="SERVICE" value="&quot;cname_d&quot;"/>
+    <elementParameter field="CHECK" name="USE_REJECTS" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="REJECTS_CLASS" value="5" show="false"/>
+    <elementParameter field="TEXT" name="PAR_NAME_LASTFIRST" value="&quot;100&quot;"/>
+    <elementParameter field="TEXT" name="PAR_NAME_FIRSTLAST" value="&quot;100&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="PAR_SPACED_REDUCES" value="1"/>
+    <elementParameter field="CLOSED_LIST" name="PAR_LINEBREAKS" value="UNI_ANA_STANDARD"/>
+    <elementParameter field="CLOSED_LIST" name="PAR_REF_PERSONS" value="1"/>
+    <elementParameter field="CLOSED_LIST" name="PAR_REF_COMPANY" value="1"/>
+    <elementParameter field="CLOSED_LIST" name="PAR_SALUTATION" value="UNI_ANA_CORRECT_INPUT"/>
+    <elementParameter field="CLOSED_LIST" name="PAR_STREET" value="UNI_ANA_W_TYPE"/>
+    <elementParameter field="CLOSED_LIST" name="PAR_CITY" value="UNI_ANA_NORMAL"/>
+    <elementParameter field="CLOSED_LIST" name="PAR_NORM_OUTPUT" value="UNI_ANA_NORM_LIKE_DICT"/>
+    <elementParameter field="CLOSED_LIST" name="PAR_TRANS_UPPER_LOWER" value="UNI_ANA_NOTHING"/>
+    <elementParameter field="CLOSED_LIST" name="PAR_NORM_SPEC_CHARS" value="UNI_ANA_SC_ALL"/>
+    <elementParameter field="TEXT" name="PAR_OUT_BAD_LINE_1" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PAR_OUT_BAD_LINE_2" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PAR_OUT_BAD_LINE_3" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PAR_OUT_BAD_LINE_4" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PAR_OUT_BAD_LINE_5" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PAR_OUT_BAD_LINE_6" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PAR_FREE_FIELD_01" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PAR_FREE_FIELD_02" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PAR_FREE_FIELD_03" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PAR_FREE_FIELD_04" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PAR_FREE_FIELD_05" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PAR_FREE_FIELD_06" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PAR_FREE_FIELD_07" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PAR_FREE_FIELD_08" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PAR_FREE_FIELD_09" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PAR_FREE_FIELD_10" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PAR_CACHE_SIZE" value="&quot;30&quot;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tUniservRTConvertName_1">
+      <column defaultValue="" key="false" length="200" name="IN_LINE_1" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="200" name="IN_LINE_2" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="200" name="IN_LINE_3" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="200" name="IN_LINE_4" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="200" name="IN_LINE_5" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="200" name="IN_LINE_6" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="OUTPUT" name="OUTPUT">
+      <column defaultValue="" key="false" length="5" name="OUT_RES_RATE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="200" name="OUT_COMPANY" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="40" name="OUT_COMP_FORM" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="1" name="OUT_RES_COMP_REF" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="30" name="OUT_COMP_REF" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="10" name="OUT_COMP_REF_WORD" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="50" name="OUT_PERS1" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="1" name="OUT_RES_PERS1_REF" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="30" name="OUT_PERS1_REF" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="17" name="OUT_PERS1_REF_WORD" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="1" name="OUT_RES_PERS1_SEX" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="OUT_PERS1_SALUTATION" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="OUT_PERS1_LETTER" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="10" name="OUT_PERS1_ENVELOPE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="29" name="OUT_PERS1_TITLE_ACA" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="15" name="OUT_PERS1_TITLE_NOB" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="25" name="OUT_PERS1_TITLE_OTH" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="25" name="OUT_PERS1_PROF" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="30" name="OUT_PERS1_FIRST" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="1" name="OUT_RES_PERS1_FIRST" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="40" name="OUT_PERS1_LAST" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="15" name="OUT_PERS1_LAST_PREF" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="30" name="OUT_PERS1_LAST_MAIN" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="10" name="OUT_PERS1_LAST_SUFF" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="1" name="OUT_RES_PERS1_LAST" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="50" name="OUT_PERS2" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="1" name="OUT_RES_PERS2_REF" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="30" name="OUT_PERS2_REF" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="17" name="OUT_PERS2_REF_WORD" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="1" name="OUT_RES_PERS2_SEX" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="OUT_PERS2_SALUTATION" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="OUT_PERS2_LETTER" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="10" name="OUT_PERS2_ENVELOPE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="29" name="OUT_PERS2_TITLE_ACA" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="15" name="OUT_PERS2_TITLE_NOB" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="25" name="OUT_PERS2_TITLE_OTH" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="25" name="OUT_PERS2_PROF" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="30" name="OUT_PERS2_FIRST" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="1" name="OUT_RES_PERS2_FIRST" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="40" name="OUT_PERS2_LAST" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="15" name="OUT_PERS2_LAST_PREF" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="30" name="OUT_PERS2_LAST_MAIN" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="10" name="OUT_PERS2_LAST_SUFF" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="1" name="OUT_RES_PERS2_LAST" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="50" name="OUT_PERS3" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="1" name="OUT_RES_PERS3_REF" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="30" name="OUT_PERS3_REF" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="17" name="OUT_PERS3_REF_WORD" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="1" name="OUT_RES_PERS3_SEX" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="OUT_PERS3_SALUTATION" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="OUT_PERS3_LETTER" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="10" name="OUT_PERS3_ENVELOPE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="29" name="OUT_PERS3_TITLE_ACA" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="15" name="OUT_PERS3_TITLE_NOB" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="25" name="OUT_PERS3_TITLE_OTH" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="25" name="OUT_PERS3_PROF" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="30" name="OUT_PERS3_FIRST" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="1" name="OUT_RES_PERS3_FIRST" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="40" name="OUT_PERS3_LAST" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="15" name="OUT_PERS3_LAST_PREF" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="30" name="OUT_PERS3_LAST_MAIN" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="10" name="OUT_PERS3_LAST_SUFF" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="1" name="OUT_RES_PERS3_LAST" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="50" name="OUT_LOCATION_ADD" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="100" name="OUT_STR_HNO" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="9" name="OUT_ZIP" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="100" name="OUT_CITY" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="200" name="OUT_NOT_RECOGNIZED" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="4" name="OUT_RES_INFO" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="1" name="OUT_RES_SEX" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="OUT_SALUTATION" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="30" name="OUT_LETTER" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="10" name="OUT_ENVELOPE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="100" name="OUT_FREE_FIELD_01" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="100" name="OUT_FREE_FIELD_02" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="100" name="OUT_FREE_FIELD_03" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="100" name="OUT_FREE_FIELD_04" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="100" name="OUT_FREE_FIELD_05" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="100" name="OUT_FREE_FIELD_06" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="100" name="OUT_FREE_FIELD_07" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="100" name="OUT_FREE_FIELD_08" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="100" name="OUT_FREE_FIELD_09" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="100" name="OUT_FREE_FIELD_10" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="2" name="OUT_RES_CNAME_CL" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column defaultValue="" key="false" length="200" name="IN_LINE_1" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="200" name="IN_LINE_2" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="200" name="IN_LINE_3" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="200" name="IN_LINE_4" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="200" name="IN_LINE_5" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="200" name="IN_LINE_6" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tUniservBTGeneric_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tUniservRTConvertName_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
 </talendfile:ProcessType>
