@@ -2,8 +2,8 @@
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:tdqmatching="http://www.talend.org/tdqmatching" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" name="Default"/>
   <parameters>
-    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
-    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="4" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="4" show="false"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value="" show="false"/>
     <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" value="" show="false"/>
     <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" value="" show="false"/>
@@ -170,7 +170,7 @@
     <elementParameter field="EXTERNAL" name="PREVIEW" value=""/>
     <elementParameter field="CHECK" name="GID_USE_STRING" value="true" show="false"/>
     <elementParameter field="CHECK" name="COMPUTE_GRP_QUALITY" value="true" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="MATCHING_ALGORITHM" value="TSWOOSH_MATCHER"/>
+    <elementParameter field="CLOSED_LIST" name="MATCHING_ALGORITHM" value="Simple VSR Matcher"/>
     <elementParameter field="TABLE" name="SURVIVORSHIP_JOIN_KEY" show="false"/>
     <elementParameter field="TABLE" name="JOIN_KEY" show="false"/>
     <elementParameter field="TEXT" name="INTERVAL_RULE" value="0.85" show="false"/>
@@ -387,6 +387,12 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <elementParameter field="SURVIVOR_RELATION" name="drools" value="_EadVgOjmEeaEtdzMA2lQrg" show="false"/>
     <elementParameter field="SURVIVOR_RELATION" name="Prenom" value="_E5RYcOjmEeaEtdzMA2lQrg" show="false"/>
+    <elementParameter field="SURVIVOR_RELATION" name="Nom_Rue" value="_FuKZEOjmEeaEtdzMA2lQrg" show="false"/>
+    <elementParameter field="SURVIVOR_RELATION" name="Nom" value="_HCu_UOjmEeaEtdzMA2lQrg" show="false"/>
+    <elementParameter field="SURVIVOR_RELATION" name="CodePostal" value="_Hx9c0OjmEeaEtdzMA2lQrg" show="false"/>
+    <elementParameter field="SURVIVOR_RELATION" name="Pays" value="_IhAUIOjmEeaEtdzMA2lQrg" show="false"/>
+    <elementParameter field="SURVIVOR_RELATION" name="Ville" value="_JZ3OwOjmEeaEtdzMA2lQrg" show="false"/>
+    <elementParameter field="SURVIVOR_RELATION" name="SurvivorFlow" value="_OU17AOjmEeaEtdzMA2lQrg" show="false"/>
     <metadata connector="FLOW" name="tRuleSurvivorship_1">
       <column comment="" defaultValue="" key="false" length="-1" name="Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
         <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;sequence&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;sequence identifier&quot;,&quot;PARAMETER_VALUE&quot;:&quot;\&quot;s1\&quot; &quot;},{&quot;PARAMETER_NAME&quot;:&quot;start value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;1 &quot;},{&quot;PARAMETER_NAME&quot;:&quot;step&quot;,&quot;PARAMETER_VALUE&quot;:&quot;1 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;Numeric&quot;}"/>

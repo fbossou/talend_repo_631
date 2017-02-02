@@ -809,6 +809,12 @@
       <relatedItems xmi:id="_b3i2o-jcEeaEtdzMA2lQrg" id="A2_standardizeaddressTstandardizerow_1" version="Latest" type="routine"/>
       <relatedItems xmi:id="_GZEXQOjmEeaEtdzMA2lQrg" id="_EadVgOjmEeaEtdzMA2lQrg" version="Latest" type="survivorshipRuleRelation"/>
       <relatedItems xmi:id="_GZEXQejmEeaEtdzMA2lQrg" id="_E5RYcOjmEeaEtdzMA2lQrg" version="Latest" type="survivorshipRuleRelation"/>
+      <relatedItems xmi:id="_SNMsoOjmEeaEtdzMA2lQrg" id="_JZ3OwOjmEeaEtdzMA2lQrg" version="Latest" type="survivorshipRuleRelation"/>
+      <relatedItems xmi:id="_SNMsoejmEeaEtdzMA2lQrg" id="_HCu_UOjmEeaEtdzMA2lQrg" version="Latest" type="survivorshipRuleRelation"/>
+      <relatedItems xmi:id="_SNMsoujmEeaEtdzMA2lQrg" id="_OU17AOjmEeaEtdzMA2lQrg" version="Latest" type="survivorshipRuleRelation"/>
+      <relatedItems xmi:id="_SNMso-jmEeaEtdzMA2lQrg" id="_FuKZEOjmEeaEtdzMA2lQrg" version="Latest" type="survivorshipRuleRelation"/>
+      <relatedItems xmi:id="_SNMspOjmEeaEtdzMA2lQrg" id="_IhAUIOjmEeaEtdzMA2lQrg" version="Latest" type="survivorshipRuleRelation"/>
+      <relatedItems xmi:id="_SNMspejmEeaEtdzMA2lQrg" id="_Hx9c0OjmEeaEtdzMA2lQrg" version="Latest" type="survivorshipRuleRelation"/>
     </ItemsRelations>
     <migrationTask xmi:id="_SUvmQOi-EeaEtdzMA2lQrg" id="org.talend.repository.localprovider.RemoveRoutineFolderTask" breaks="5.1.1" version="5.1.2" status="noimpact"/>
     <migrationTask xmi:id="_SUvmQei-EeaEtdzMA2lQrg" id="org.talend.repository.localprovider.model.migration.ChangeXmiSerialization" breaks="5.1.1" version="5.1.2" status="noimpact"/>
