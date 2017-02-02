@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:tdqmatching="http://www.talend.org/tdqmatching" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" name="Default"/>
   <parameters>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0" show="false"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value="" show="false"/>
     <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" value="" show="false"/>
     <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" value="" show="false"/>
@@ -113,4 +115,544 @@
     <routinesParameter id="_jFtsAOJpEeCmJNdA0HkfKA" name="A2_standardizeaddressTstandardizerow_1"/>
     <routinesParameter id="_wU5qIOJpEeCmJNdA0HkfKA" name="Products_parsingTstandardizerow_1"/>
   </parameters>
+  <node componentName="tRowGenerator" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="160" posY="160">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRowGenerator_1" show="false"/>
+    <elementParameter field="TEXT" name="NB_ROWS" value="1000" show="false"/>
+    <elementParameter field="TABLE" name="VALUES" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="Id"/>
+      <elementValue elementRef="ARRAY" value="Numeric.sequence(&quot;s1&quot; ,1 ,1 )"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Nom"/>
+      <elementValue elementRef="ARRAY" value="TalendDataGenerator.getLastName()"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Prenom"/>
+      <elementValue elementRef="ARRAY" value="TalendDataGenerator.getFirstName()"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Num_Rue"/>
+      <elementValue elementRef="ARRAY" value="Numeric.random(0 ,100 )"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Nom_Rue"/>
+      <elementValue elementRef="ARRAY" value="TalendDataGenerator.getUsStreet()"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CodePostal"/>
+      <elementValue elementRef="ARRAY" value="Numeric.random(75001 ,95999 )"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Ville"/>
+      <elementValue elementRef="ARRAY" value="TalendDataGenerator.getUsCity()"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Pays"/>
+      <elementValue elementRef="ARRAY" value="2241666768616e697374616e222c0d0a22416c62616e6961222c0d0a22416e7461726374696361222c0d0a22416c6765726961222c0d0a22416d65726963616e2053616d6f61222c0d0a22416e646f727261222c0d0a22416e676f6c61222c0d0a22416e746967756120616e642042617262756461222c0d0a22417a65726261696a616e222c0d0a22417267656e74696e61222c0d0a224175737472616c6961222c0d0a2241757374726961222c0d0a22426168616d6173222c0d0a224261687261696e222c0d0a2242616e676c6164657368222c0d0a2241726d656e6961222c0d0a224261726261646f73222c0d0a2242656c6769756d222c0d0a224265726d756461222c0d0a2242687574616e222c0d0a22426f6c69766961222c0d0a22426f736e696120616e64204865727a65676f76696e61222c0d0a22426f747377616e61222c0d0a22426f757665742049736c616e64222c0d0a224272617a696c222c0d0a2242656c697a65222c0d0a224272697469736820496e6469616e204f6365616e205465727269746f7279222c0d0a22536f6c6f6d6f6e2049736c616e6473222c0d0a22427269746973682056697267696e2049736c616e6473222c0d0a224272756e656920446172757373616c616d222c0d0a2242756c6761726961222c0d0a224d79616e6d6172222c0d0a22427572756e6469222c0d0a2242656c61727573222c0d0a2243616d626f646961222c0d0a2243616d65726f6f6e222c0d0a2243616e616461222c0d0a2243617065205665726465222c0d0a224361796d616e2049736c616e6473222c0d0a2243656e7472616c204166726963616e222c0d0a22537269204c616e6b61222c0d0a2243686164222c0d0a224368696c65222c0d0a224368696e61222c0d0a22536f75746820416672696361222c0d0a225a696d6261627765222c0d0a22537061696e222c0d0a225765737465726e20536168617261222c0d0a22537564616e222c0d0a22537572696e616d65222c0d0a225376616c6261726420616e64204a616e204d6179656e222c0d0a225377617a696c616e64222c0d0a2253776564656e222c0d0a22537769747a65726c616e64222c0d0a2253797269616e20417261622052657075626c6963222c0d0a2254616a696b697374616e222c0d0a22546861696c616e64222c0d0a22546f676f222c0d0a22546f6b656c6175222c0d0a22546f6e6761222c0d0a225472696e6964616420616e6420546f6261676f222c0d0a22556e69746564204172616220456d697261746573222c0d0a2254756e69736961222c0d0a225475726b6579222c0d0a225475726b6d656e697374616e222c0d0a225475726b7320616e6420436169636f732049736c616e6473222c0d0a22547576616c75222c0d0a225567616e6461222c0d0a22556b7261696e65222c0d0a2254686520466f726d6572205975676f736c61762052657075626c6963206f66204d616365646f6e6961222c0d0a2245677970740d0a22556e69746564204b696e67646f6d222c0d0a2249736c65206f66204d616e222c0d0a22556e697465642052657075626c6963204f662054616e7a616e6961222c0d0a22556e6974656420537461746573222c0d0a22552e532e2056697267696e2049736c616e6473222c0d0a224275726b696e61204661736f222c0d0a2255727567756179222c0d0a22557a62656b697374616e222c0d0a2256656e657a75656c61222c0d0a2257616c6c697320616e6420467574756e61222c0d0a2253616d6f61222c0d0a2259656d656e222c0d0a2253657262696120616e64204d6f6e74656e6567726f222c0d0a225a616d6269612220" hexValue="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Telephone"/>
+      <elementValue elementRef="ARRAY" value="Numeric.random(23467939 ,93235677 )"/>
+    </elementParameter>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tRowGenerator_1">
+      <column comment="" defaultValue="" key="false" length="-1" name="Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;sequence&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;sequence identifier&quot;,&quot;PARAMETER_VALUE&quot;:&quot;\&quot;s1\&quot; &quot;},{&quot;PARAMETER_NAME&quot;:&quot;start value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;1 &quot;},{&quot;PARAMETER_NAME&quot;:&quot;step&quot;,&quot;PARAMETER_VALUE&quot;:&quot;1 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;Numeric&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="Nom" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getLastName&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="Prenom" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getFirstName&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="Num_Rue" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;random&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;min value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;0 &quot;},{&quot;PARAMETER_NAME&quot;:&quot;max value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;100 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;Numeric&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="Nom_Rue" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getUsStreet&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="CodePostal" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;random&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;min value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;75001 &quot;},{&quot;PARAMETER_NAME&quot;:&quot;max value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;95999 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;Numeric&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="Ville" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getUsCity&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="Pays" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;...&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;customize parameter&quot;,&quot;PARAMETER_VALUE&quot;:&quot;\&quot;Afghanistan\&quot;,\r\n\&quot;Albania\&quot;,\r\n\&quot;Antarctica\&quot;,\r\n\&quot;Algeria\&quot;,\r\n\&quot;American Samoa\&quot;,\r\n\&quot;Andorra\&quot;,\r\n\&quot;Angola\&quot;,\r\n\&quot;Antigua and Barbuda\&quot;,\r\n\&quot;Azerbaijan\&quot;,\r\n\&quot;Argentina\&quot;,\r\n\&quot;Australia\&quot;,\r\n\&quot;Austria\&quot;,\r\n\&quot;Bahamas\&quot;,\r\n\&quot;Bahrain\&quot;,\r\n\&quot;Bangladesh\&quot;,\r\n\&quot;Armenia\&quot;,\r\n\&quot;Barbados\&quot;,\r\n\&quot;Belgium\&quot;,\r\n\&quot;Bermuda\&quot;,\r\n\&quot;Bhutan\&quot;,\r\n\&quot;Bolivia\&quot;,\r\n\&quot;Bosnia and Herzegovina\&quot;,\r\n\&quot;Botswana\&quot;,\r\n\&quot;Bouvet Island\&quot;,\r\n\&quot;Brazil\&quot;,\r\n\&quot;Belize\&quot;,\r\n\&quot;British Indian Ocean Territory\&quot;,\r\n\&quot;Solomon Islands\&quot;,\r\n\&quot;British Virgin Islands\&quot;,\r\n\&quot;Brunei Darussalam\&quot;,\r\n\&quot;Bulgaria\&quot;,\r\n\&quot;Myanmar\&quot;,\r\n\&quot;Burundi\&quot;,\r\n\&quot;Belarus\&quot;,\r\n\&quot;Cambodia\&quot;,\r\n\&quot;Cameroon\&quot;,\r\n\&quot;Canada\&quot;,\r\n\&quot;Cape Verde\&quot;,\r\n\&quot;Cayman Islands\&quot;,\r\n\&quot;Central African\&quot;,\r\n\&quot;Sri Lanka\&quot;,\r\n\&quot;Chad\&quot;,\r\n\&quot;Chile\&quot;,\r\n\&quot;China\&quot;,\r\n\&quot;South Africa\&quot;,\r\n\&quot;Zimbabwe\&quot;,\r\n\&quot;Spain\&quot;,\r\n\&quot;Western Sahara\&quot;,\r\n\&quot;Sudan\&quot;,\r\n\&quot;Suriname\&quot;,\r\n\&quot;Svalbard and Jan Mayen\&quot;,\r\n\&quot;Swaziland\&quot;,\r\n\&quot;Sweden\&quot;,\r\n\&quot;Switzerland\&quot;,\r\n\&quot;Syrian Arab Republic\&quot;,\r\n\&quot;Tajikistan\&quot;,\r\n\&quot;Thailand\&quot;,\r\n\&quot;Togo\&quot;,\r\n\&quot;Tokelau\&quot;,\r\n\&quot;Tonga\&quot;,\r\n\&quot;Trinidad and Tobago\&quot;,\r\n\&quot;United Arab Emirates\&quot;,\r\n\&quot;Tunisia\&quot;,\r\n\&quot;Turkey\&quot;,\r\n\&quot;Turkmenistan\&quot;,\r\n\&quot;Turks and Caicos Islands\&quot;,\r\n\&quot;Tuvalu\&quot;,\r\n\&quot;Uganda\&quot;,\r\n\&quot;Ukraine\&quot;,\r\n\&quot;The Former Yugoslav Republic of Macedonia\&quot;,\r\n\&quot;Egypt\r\n\&quot;United Kingdom\&quot;,\r\n\&quot;Isle of Man\&quot;,\r\n\&quot;United Republic Of Tanzania\&quot;,\r\n\&quot;United States\&quot;,\r\n\&quot;U.S. Virgin Islands\&quot;,\r\n\&quot;Burkina Faso\&quot;,\r\n\&quot;Uruguay\&quot;,\r\n\&quot;Uzbekistan\&quot;,\r\n\&quot;Venezuela\&quot;,\r\n\&quot;Wallis and Futuna\&quot;,\r\n\&quot;Samoa\&quot;,\r\n\&quot;Yemen\&quot;,\r\n\&quot;Serbia and Montenegro\&quot;,\r\n\&quot;Zambia\&quot; &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="Telephone" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;random&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;min value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;23467939 &quot;},{&quot;PARAMETER_NAME&quot;:&quot;max value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;93235677 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;Numeric&quot;}"/>
+      </column>
+    </metadata>
+  </node>
+  <node componentName="tMatchGroup" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="448" posY="160">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMatchGroup_1" show="false"/>
+    <elementParameter field="EXTERNAL" name="PREVIEW" value=""/>
+    <elementParameter field="CHECK" name="GID_USE_STRING" value="true" show="false"/>
+    <elementParameter field="CHECK" name="COMPUTE_GRP_QUALITY" value="true" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="MATCHING_ALGORITHM" value="Simple VSR Matcher"/>
+    <elementParameter field="TABLE" name="SURVIVORSHIP_JOIN_KEY" show="false"/>
+    <elementParameter field="TABLE" name="JOIN_KEY" show="false"/>
+    <elementParameter field="TEXT" name="INTERVAL_RULE" value="0.85" show="false"/>
+    <elementParameter field="TABLE" name="SURVIVORSHIP" show="false"/>
+    <elementParameter field="TABLE" name="BLOCKING_DEFINITION" show="false">
+      <elementValue elementRef="INPUT_COLUMN" value="Pays"/>
+      <elementValue elementRef="INPUT_COLUMN" value="Ville"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="SHOW_BASIC_PARAMETER" value="false" show="false"/>
+    <elementParameter field="TEXT" name="INTERVAL" value="0.85" show="false"/>
+    <elementParameter field="CHECK" name="STORE_ON_DISK" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="200000" show="false"/>
+    <elementParameter field="DIRECTORY" name="TMP_DIRECTORY" value="&quot;C:/Talend/6.3.1/studio/workspace&quot;" show="false"/>
+    <elementParameter field="CHECK" name="SEPARATE_OUTPUT" value="false"/>
+    <elementParameter field="TEXT" name="CONFIDENCE_THRESHOLD" value="0.9" show="false"/>
+    <elementParameter field="CHECK" name="LINK_WITH_PREVIOUS" value="false"/>
+    <elementParameter field="CHECK" name="PROPAGATE_ORIGINAL" value="false" show="false"/>
+    <elementParameter field="CHECK" name="SORT_DATA" value="true"/>
+    <elementParameter field="CHECK" name="OUTPUTDD" value="false"/>
+    <elementParameter field="CHECK" name="DISPLAY_ATTR_LABELS" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DEACTIVATE_MATCHING_COMPUTATION" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tMatchGroup_1">
+      <column comment="" defaultValue="" key="false" length="-1" name="Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;sequence&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;sequence identifier&quot;,&quot;PARAMETER_VALUE&quot;:&quot;\&quot;s1\&quot; &quot;},{&quot;PARAMETER_NAME&quot;:&quot;start value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;1 &quot;},{&quot;PARAMETER_NAME&quot;:&quot;step&quot;,&quot;PARAMETER_VALUE&quot;:&quot;1 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;Numeric&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="Nom" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getLastName&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="Prenom" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getFirstName&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="Num_Rue" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;random&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;min value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;0 &quot;},{&quot;PARAMETER_NAME&quot;:&quot;max value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;100 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;Numeric&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="Nom_Rue" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getUsStreet&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="CodePostal" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;random&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;min value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;75001 &quot;},{&quot;PARAMETER_NAME&quot;:&quot;max value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;95999 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;Numeric&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="Ville" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getUsCity&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="Pays" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;...&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;customize parameter&quot;,&quot;PARAMETER_VALUE&quot;:&quot;\&quot;Afghanistan\&quot;,\r\n\&quot;Albania\&quot;,\r\n\&quot;Antarctica\&quot;,\r\n\&quot;Algeria\&quot;,\r\n\&quot;American Samoa\&quot;,\r\n\&quot;Andorra\&quot;,\r\n\&quot;Angola\&quot;,\r\n\&quot;Antigua and Barbuda\&quot;,\r\n\&quot;Azerbaijan\&quot;,\r\n\&quot;Argentina\&quot;,\r\n\&quot;Australia\&quot;,\r\n\&quot;Austria\&quot;,\r\n\&quot;Bahamas\&quot;,\r\n\&quot;Bahrain\&quot;,\r\n\&quot;Bangladesh\&quot;,\r\n\&quot;Armenia\&quot;,\r\n\&quot;Barbados\&quot;,\r\n\&quot;Belgium\&quot;,\r\n\&quot;Bermuda\&quot;,\r\n\&quot;Bhutan\&quot;,\r\n\&quot;Bolivia\&quot;,\r\n\&quot;Bosnia and Herzegovina\&quot;,\r\n\&quot;Botswana\&quot;,\r\n\&quot;Bouvet Island\&quot;,\r\n\&quot;Brazil\&quot;,\r\n\&quot;Belize\&quot;,\r\n\&quot;British Indian Ocean Territory\&quot;,\r\n\&quot;Solomon Islands\&quot;,\r\n\&quot;British Virgin Islands\&quot;,\r\n\&quot;Brunei Darussalam\&quot;,\r\n\&quot;Bulgaria\&quot;,\r\n\&quot;Myanmar\&quot;,\r\n\&quot;Burundi\&quot;,\r\n\&quot;Belarus\&quot;,\r\n\&quot;Cambodia\&quot;,\r\n\&quot;Cameroon\&quot;,\r\n\&quot;Canada\&quot;,\r\n\&quot;Cape Verde\&quot;,\r\n\&quot;Cayman Islands\&quot;,\r\n\&quot;Central African\&quot;,\r\n\&quot;Sri Lanka\&quot;,\r\n\&quot;Chad\&quot;,\r\n\&quot;Chile\&quot;,\r\n\&quot;China\&quot;,\r\n\&quot;South Africa\&quot;,\r\n\&quot;Zimbabwe\&quot;,\r\n\&quot;Spain\&quot;,\r\n\&quot;Western Sahara\&quot;,\r\n\&quot;Sudan\&quot;,\r\n\&quot;Suriname\&quot;,\r\n\&quot;Svalbard and Jan Mayen\&quot;,\r\n\&quot;Swaziland\&quot;,\r\n\&quot;Sweden\&quot;,\r\n\&quot;Switzerland\&quot;,\r\n\&quot;Syrian Arab Republic\&quot;,\r\n\&quot;Tajikistan\&quot;,\r\n\&quot;Thailand\&quot;,\r\n\&quot;Togo\&quot;,\r\n\&quot;Tokelau\&quot;,\r\n\&quot;Tonga\&quot;,\r\n\&quot;Trinidad and Tobago\&quot;,\r\n\&quot;United Arab Emirates\&quot;,\r\n\&quot;Tunisia\&quot;,\r\n\&quot;Turkey\&quot;,\r\n\&quot;Turkmenistan\&quot;,\r\n\&quot;Turks and Caicos Islands\&quot;,\r\n\&quot;Tuvalu\&quot;,\r\n\&quot;Uganda\&quot;,\r\n\&quot;Ukraine\&quot;,\r\n\&quot;The Former Yugoslav Republic of Macedonia\&quot;,\r\n\&quot;Egypt\r\n\&quot;United Kingdom\&quot;,\r\n\&quot;Isle of Man\&quot;,\r\n\&quot;United Republic Of Tanzania\&quot;,\r\n\&quot;United States\&quot;,\r\n\&quot;U.S. Virgin Islands\&quot;,\r\n\&quot;Burkina Faso\&quot;,\r\n\&quot;Uruguay\&quot;,\r\n\&quot;Uzbekistan\&quot;,\r\n\&quot;Venezuela\&quot;,\r\n\&quot;Wallis and Futuna\&quot;,\r\n\&quot;Samoa\&quot;,\r\n\&quot;Yemen\&quot;,\r\n\&quot;Serbia and Montenegro\&quot;,\r\n\&quot;Zambia\&quot; &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="Telephone" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;random&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;min value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;23467939 &quot;},{&quot;PARAMETER_NAME&quot;:&quot;max value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;93235677 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;Numeric&quot;}"/>
+      </column>
+      <column defaultValue="" key="false" length="0" name="GID" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="0" name="GRP_SIZE" nullable="true" precision="0" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="0" name="MASTER" nullable="true" precision="0" sourceType="" type="id_Boolean" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="SCORE" nullable="true" precision="0" sourceType="" type="id_Double" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="GRP_QUALITY" nullable="true" precision="0" sourceType="" type="id_Double" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="UNIQUE_ROWS" name="UNIQUE_ROWS">
+      <column comment="" defaultValue="" key="false" length="-1" name="Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;sequence&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;sequence identifier&quot;,&quot;PARAMETER_VALUE&quot;:&quot;\&quot;s1\&quot; &quot;},{&quot;PARAMETER_NAME&quot;:&quot;start value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;1 &quot;},{&quot;PARAMETER_NAME&quot;:&quot;step&quot;,&quot;PARAMETER_VALUE&quot;:&quot;1 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;Numeric&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="Nom" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getLastName&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="Prenom" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getFirstName&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="Num_Rue" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;random&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;min value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;0 &quot;},{&quot;PARAMETER_NAME&quot;:&quot;max value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;100 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;Numeric&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="Nom_Rue" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getUsStreet&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="CodePostal" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;random&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;min value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;75001 &quot;},{&quot;PARAMETER_NAME&quot;:&quot;max value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;95999 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;Numeric&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="Ville" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getUsCity&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="Pays" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;...&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;customize parameter&quot;,&quot;PARAMETER_VALUE&quot;:&quot;\&quot;Afghanistan\&quot;,\r\n\&quot;Albania\&quot;,\r\n\&quot;Antarctica\&quot;,\r\n\&quot;Algeria\&quot;,\r\n\&quot;American Samoa\&quot;,\r\n\&quot;Andorra\&quot;,\r\n\&quot;Angola\&quot;,\r\n\&quot;Antigua and Barbuda\&quot;,\r\n\&quot;Azerbaijan\&quot;,\r\n\&quot;Argentina\&quot;,\r\n\&quot;Australia\&quot;,\r\n\&quot;Austria\&quot;,\r\n\&quot;Bahamas\&quot;,\r\n\&quot;Bahrain\&quot;,\r\n\&quot;Bangladesh\&quot;,\r\n\&quot;Armenia\&quot;,\r\n\&quot;Barbados\&quot;,\r\n\&quot;Belgium\&quot;,\r\n\&quot;Bermuda\&quot;,\r\n\&quot;Bhutan\&quot;,\r\n\&quot;Bolivia\&quot;,\r\n\&quot;Bosnia and Herzegovina\&quot;,\r\n\&quot;Botswana\&quot;,\r\n\&quot;Bouvet Island\&quot;,\r\n\&quot;Brazil\&quot;,\r\n\&quot;Belize\&quot;,\r\n\&quot;British Indian Ocean Territory\&quot;,\r\n\&quot;Solomon Islands\&quot;,\r\n\&quot;British Virgin Islands\&quot;,\r\n\&quot;Brunei Darussalam\&quot;,\r\n\&quot;Bulgaria\&quot;,\r\n\&quot;Myanmar\&quot;,\r\n\&quot;Burundi\&quot;,\r\n\&quot;Belarus\&quot;,\r\n\&quot;Cambodia\&quot;,\r\n\&quot;Cameroon\&quot;,\r\n\&quot;Canada\&quot;,\r\n\&quot;Cape Verde\&quot;,\r\n\&quot;Cayman Islands\&quot;,\r\n\&quot;Central African\&quot;,\r\n\&quot;Sri Lanka\&quot;,\r\n\&quot;Chad\&quot;,\r\n\&quot;Chile\&quot;,\r\n\&quot;China\&quot;,\r\n\&quot;South Africa\&quot;,\r\n\&quot;Zimbabwe\&quot;,\r\n\&quot;Spain\&quot;,\r\n\&quot;Western Sahara\&quot;,\r\n\&quot;Sudan\&quot;,\r\n\&quot;Suriname\&quot;,\r\n\&quot;Svalbard and Jan Mayen\&quot;,\r\n\&quot;Swaziland\&quot;,\r\n\&quot;Sweden\&quot;,\r\n\&quot;Switzerland\&quot;,\r\n\&quot;Syrian Arab Republic\&quot;,\r\n\&quot;Tajikistan\&quot;,\r\n\&quot;Thailand\&quot;,\r\n\&quot;Togo\&quot;,\r\n\&quot;Tokelau\&quot;,\r\n\&quot;Tonga\&quot;,\r\n\&quot;Trinidad and Tobago\&quot;,\r\n\&quot;United Arab Emirates\&quot;,\r\n\&quot;Tunisia\&quot;,\r\n\&quot;Turkey\&quot;,\r\n\&quot;Turkmenistan\&quot;,\r\n\&quot;Turks and Caicos Islands\&quot;,\r\n\&quot;Tuvalu\&quot;,\r\n\&quot;Uganda\&quot;,\r\n\&quot;Ukraine\&quot;,\r\n\&quot;The Former Yugoslav Republic of Macedonia\&quot;,\r\n\&quot;Egypt\r\n\&quot;United Kingdom\&quot;,\r\n\&quot;Isle of Man\&quot;,\r\n\&quot;United Republic Of Tanzania\&quot;,\r\n\&quot;United States\&quot;,\r\n\&quot;U.S. Virgin Islands\&quot;,\r\n\&quot;Burkina Faso\&quot;,\r\n\&quot;Uruguay\&quot;,\r\n\&quot;Uzbekistan\&quot;,\r\n\&quot;Venezuela\&quot;,\r\n\&quot;Wallis and Futuna\&quot;,\r\n\&quot;Samoa\&quot;,\r\n\&quot;Yemen\&quot;,\r\n\&quot;Serbia and Montenegro\&quot;,\r\n\&quot;Zambia\&quot; &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="Telephone" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;random&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;min value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;23467939 &quot;},{&quot;PARAMETER_NAME&quot;:&quot;max value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;93235677 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;Numeric&quot;}"/>
+      </column>
+      <column defaultValue="" key="false" length="0" name="GID" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="0" name="GRP_SIZE" nullable="true" precision="0" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="0" name="MASTER" nullable="true" precision="0" sourceType="" type="id_Boolean" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="SCORE" nullable="true" precision="0" sourceType="" type="id_Double" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="GRP_QUALITY" nullable="true" precision="0" sourceType="" type="id_Double" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="CONFIDENT_GROUPS" name="CONFIDENT_GROUPS">
+      <column comment="" defaultValue="" key="false" length="-1" name="Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;sequence&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;sequence identifier&quot;,&quot;PARAMETER_VALUE&quot;:&quot;\&quot;s1\&quot; &quot;},{&quot;PARAMETER_NAME&quot;:&quot;start value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;1 &quot;},{&quot;PARAMETER_NAME&quot;:&quot;step&quot;,&quot;PARAMETER_VALUE&quot;:&quot;1 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;Numeric&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="Nom" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getLastName&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="Prenom" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getFirstName&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="Num_Rue" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;random&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;min value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;0 &quot;},{&quot;PARAMETER_NAME&quot;:&quot;max value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;100 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;Numeric&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="Nom_Rue" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getUsStreet&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="CodePostal" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;random&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;min value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;75001 &quot;},{&quot;PARAMETER_NAME&quot;:&quot;max value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;95999 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;Numeric&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="Ville" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getUsCity&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="Pays" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;...&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;customize parameter&quot;,&quot;PARAMETER_VALUE&quot;:&quot;\&quot;Afghanistan\&quot;,\r\n\&quot;Albania\&quot;,\r\n\&quot;Antarctica\&quot;,\r\n\&quot;Algeria\&quot;,\r\n\&quot;American Samoa\&quot;,\r\n\&quot;Andorra\&quot;,\r\n\&quot;Angola\&quot;,\r\n\&quot;Antigua and Barbuda\&quot;,\r\n\&quot;Azerbaijan\&quot;,\r\n\&quot;Argentina\&quot;,\r\n\&quot;Australia\&quot;,\r\n\&quot;Austria\&quot;,\r\n\&quot;Bahamas\&quot;,\r\n\&quot;Bahrain\&quot;,\r\n\&quot;Bangladesh\&quot;,\r\n\&quot;Armenia\&quot;,\r\n\&quot;Barbados\&quot;,\r\n\&quot;Belgium\&quot;,\r\n\&quot;Bermuda\&quot;,\r\n\&quot;Bhutan\&quot;,\r\n\&quot;Bolivia\&quot;,\r\n\&quot;Bosnia and Herzegovina\&quot;,\r\n\&quot;Botswana\&quot;,\r\n\&quot;Bouvet Island\&quot;,\r\n\&quot;Brazil\&quot;,\r\n\&quot;Belize\&quot;,\r\n\&quot;British Indian Ocean Territory\&quot;,\r\n\&quot;Solomon Islands\&quot;,\r\n\&quot;British Virgin Islands\&quot;,\r\n\&quot;Brunei Darussalam\&quot;,\r\n\&quot;Bulgaria\&quot;,\r\n\&quot;Myanmar\&quot;,\r\n\&quot;Burundi\&quot;,\r\n\&quot;Belarus\&quot;,\r\n\&quot;Cambodia\&quot;,\r\n\&quot;Cameroon\&quot;,\r\n\&quot;Canada\&quot;,\r\n\&quot;Cape Verde\&quot;,\r\n\&quot;Cayman Islands\&quot;,\r\n\&quot;Central African\&quot;,\r\n\&quot;Sri Lanka\&quot;,\r\n\&quot;Chad\&quot;,\r\n\&quot;Chile\&quot;,\r\n\&quot;China\&quot;,\r\n\&quot;South Africa\&quot;,\r\n\&quot;Zimbabwe\&quot;,\r\n\&quot;Spain\&quot;,\r\n\&quot;Western Sahara\&quot;,\r\n\&quot;Sudan\&quot;,\r\n\&quot;Suriname\&quot;,\r\n\&quot;Svalbard and Jan Mayen\&quot;,\r\n\&quot;Swaziland\&quot;,\r\n\&quot;Sweden\&quot;,\r\n\&quot;Switzerland\&quot;,\r\n\&quot;Syrian Arab Republic\&quot;,\r\n\&quot;Tajikistan\&quot;,\r\n\&quot;Thailand\&quot;,\r\n\&quot;Togo\&quot;,\r\n\&quot;Tokelau\&quot;,\r\n\&quot;Tonga\&quot;,\r\n\&quot;Trinidad and Tobago\&quot;,\r\n\&quot;United Arab Emirates\&quot;,\r\n\&quot;Tunisia\&quot;,\r\n\&quot;Turkey\&quot;,\r\n\&quot;Turkmenistan\&quot;,\r\n\&quot;Turks and Caicos Islands\&quot;,\r\n\&quot;Tuvalu\&quot;,\r\n\&quot;Uganda\&quot;,\r\n\&quot;Ukraine\&quot;,\r\n\&quot;The Former Yugoslav Republic of Macedonia\&quot;,\r\n\&quot;Egypt\r\n\&quot;United Kingdom\&quot;,\r\n\&quot;Isle of Man\&quot;,\r\n\&quot;United Republic Of Tanzania\&quot;,\r\n\&quot;United States\&quot;,\r\n\&quot;U.S. Virgin Islands\&quot;,\r\n\&quot;Burkina Faso\&quot;,\r\n\&quot;Uruguay\&quot;,\r\n\&quot;Uzbekistan\&quot;,\r\n\&quot;Venezuela\&quot;,\r\n\&quot;Wallis and Futuna\&quot;,\r\n\&quot;Samoa\&quot;,\r\n\&quot;Yemen\&quot;,\r\n\&quot;Serbia and Montenegro\&quot;,\r\n\&quot;Zambia\&quot; &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="Telephone" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;random&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;min value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;23467939 &quot;},{&quot;PARAMETER_NAME&quot;:&quot;max value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;93235677 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;Numeric&quot;}"/>
+      </column>
+      <column defaultValue="" key="false" length="0" name="GID" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="0" name="GRP_SIZE" nullable="true" precision="0" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="0" name="MASTER" nullable="true" precision="0" sourceType="" type="id_Boolean" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="SCORE" nullable="true" precision="0" sourceType="" type="id_Double" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="GRP_QUALITY" nullable="true" precision="0" sourceType="" type="id_Double" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="UNCERTAIN_GROUPS" name="UNCERTAIN_GROUPS">
+      <column comment="" defaultValue="" key="false" length="-1" name="Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;sequence&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;sequence identifier&quot;,&quot;PARAMETER_VALUE&quot;:&quot;\&quot;s1\&quot; &quot;},{&quot;PARAMETER_NAME&quot;:&quot;start value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;1 &quot;},{&quot;PARAMETER_NAME&quot;:&quot;step&quot;,&quot;PARAMETER_VALUE&quot;:&quot;1 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;Numeric&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="Nom" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getLastName&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="Prenom" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getFirstName&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="Num_Rue" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;random&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;min value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;0 &quot;},{&quot;PARAMETER_NAME&quot;:&quot;max value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;100 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;Numeric&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="Nom_Rue" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getUsStreet&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="CodePostal" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;random&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;min value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;75001 &quot;},{&quot;PARAMETER_NAME&quot;:&quot;max value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;95999 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;Numeric&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="Ville" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getUsCity&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="Pays" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;...&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;customize parameter&quot;,&quot;PARAMETER_VALUE&quot;:&quot;\&quot;Afghanistan\&quot;,\r\n\&quot;Albania\&quot;,\r\n\&quot;Antarctica\&quot;,\r\n\&quot;Algeria\&quot;,\r\n\&quot;American Samoa\&quot;,\r\n\&quot;Andorra\&quot;,\r\n\&quot;Angola\&quot;,\r\n\&quot;Antigua and Barbuda\&quot;,\r\n\&quot;Azerbaijan\&quot;,\r\n\&quot;Argentina\&quot;,\r\n\&quot;Australia\&quot;,\r\n\&quot;Austria\&quot;,\r\n\&quot;Bahamas\&quot;,\r\n\&quot;Bahrain\&quot;,\r\n\&quot;Bangladesh\&quot;,\r\n\&quot;Armenia\&quot;,\r\n\&quot;Barbados\&quot;,\r\n\&quot;Belgium\&quot;,\r\n\&quot;Bermuda\&quot;,\r\n\&quot;Bhutan\&quot;,\r\n\&quot;Bolivia\&quot;,\r\n\&quot;Bosnia and Herzegovina\&quot;,\r\n\&quot;Botswana\&quot;,\r\n\&quot;Bouvet Island\&quot;,\r\n\&quot;Brazil\&quot;,\r\n\&quot;Belize\&quot;,\r\n\&quot;British Indian Ocean Territory\&quot;,\r\n\&quot;Solomon Islands\&quot;,\r\n\&quot;British Virgin Islands\&quot;,\r\n\&quot;Brunei Darussalam\&quot;,\r\n\&quot;Bulgaria\&quot;,\r\n\&quot;Myanmar\&quot;,\r\n\&quot;Burundi\&quot;,\r\n\&quot;Belarus\&quot;,\r\n\&quot;Cambodia\&quot;,\r\n\&quot;Cameroon\&quot;,\r\n\&quot;Canada\&quot;,\r\n\&quot;Cape Verde\&quot;,\r\n\&quot;Cayman Islands\&quot;,\r\n\&quot;Central African\&quot;,\r\n\&quot;Sri Lanka\&quot;,\r\n\&quot;Chad\&quot;,\r\n\&quot;Chile\&quot;,\r\n\&quot;China\&quot;,\r\n\&quot;South Africa\&quot;,\r\n\&quot;Zimbabwe\&quot;,\r\n\&quot;Spain\&quot;,\r\n\&quot;Western Sahara\&quot;,\r\n\&quot;Sudan\&quot;,\r\n\&quot;Suriname\&quot;,\r\n\&quot;Svalbard and Jan Mayen\&quot;,\r\n\&quot;Swaziland\&quot;,\r\n\&quot;Sweden\&quot;,\r\n\&quot;Switzerland\&quot;,\r\n\&quot;Syrian Arab Republic\&quot;,\r\n\&quot;Tajikistan\&quot;,\r\n\&quot;Thailand\&quot;,\r\n\&quot;Togo\&quot;,\r\n\&quot;Tokelau\&quot;,\r\n\&quot;Tonga\&quot;,\r\n\&quot;Trinidad and Tobago\&quot;,\r\n\&quot;United Arab Emirates\&quot;,\r\n\&quot;Tunisia\&quot;,\r\n\&quot;Turkey\&quot;,\r\n\&quot;Turkmenistan\&quot;,\r\n\&quot;Turks and Caicos Islands\&quot;,\r\n\&quot;Tuvalu\&quot;,\r\n\&quot;Uganda\&quot;,\r\n\&quot;Ukraine\&quot;,\r\n\&quot;The Former Yugoslav Republic of Macedonia\&quot;,\r\n\&quot;Egypt\r\n\&quot;United Kingdom\&quot;,\r\n\&quot;Isle of Man\&quot;,\r\n\&quot;United Republic Of Tanzania\&quot;,\r\n\&quot;United States\&quot;,\r\n\&quot;U.S. Virgin Islands\&quot;,\r\n\&quot;Burkina Faso\&quot;,\r\n\&quot;Uruguay\&quot;,\r\n\&quot;Uzbekistan\&quot;,\r\n\&quot;Venezuela\&quot;,\r\n\&quot;Wallis and Futuna\&quot;,\r\n\&quot;Samoa\&quot;,\r\n\&quot;Yemen\&quot;,\r\n\&quot;Serbia and Montenegro\&quot;,\r\n\&quot;Zambia\&quot; &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="Telephone" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;random&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;min value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;23467939 &quot;},{&quot;PARAMETER_NAME&quot;:&quot;max value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;93235677 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;Numeric&quot;}"/>
+      </column>
+      <column defaultValue="" key="false" length="0" name="GID" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="0" name="GRP_SIZE" nullable="true" precision="0" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="0" name="MASTER" nullable="true" precision="0" sourceType="" type="id_Boolean" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="SCORE" nullable="true" precision="0" sourceType="" type="id_Double" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="GRP_QUALITY" nullable="true" precision="0" sourceType="" type="id_Double" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="tdqmatching:MatchingData">
+      <ruleMatchers>
+        <joinkeys>
+          <columnMap key="MATCHING_TYPE" value="Exact"/>
+          <columnMap key="SURVIVORSHIP_FUNCTION" value="Concatenate"/>
+          <columnMap key="HANDLE_NULL" value="nullMatchNull"/>
+          <columnMap key="ATTRIBUTE_THRESHOLD" value="1.0"/>
+          <columnMap key="CONFIDENCE_WEIGHT" value="1"/>
+          <columnMap key="INPUT_COLUMN" value="CodePostal"/>
+          <columnMap key="CUSTOM_MATCHER" value="&quot;&quot;"/>
+          <columnMap key="TOKENIZATION_TYPE" value="No"/>
+        </joinkeys>
+        <joinkeys>
+          <columnMap key="MATCHING_TYPE" value="Levenshtein"/>
+          <columnMap key="SURVIVORSHIP_FUNCTION" value="Concatenate"/>
+          <columnMap key="HANDLE_NULL" value="nullMatchNull"/>
+          <columnMap key="ATTRIBUTE_THRESHOLD" value="1.0"/>
+          <columnMap key="CONFIDENCE_WEIGHT" value="1"/>
+          <columnMap key="INPUT_COLUMN" value="Nom"/>
+          <columnMap key="CUSTOM_MATCHER" value="&quot;&quot;"/>
+          <columnMap key="TOKENIZATION_TYPE" value="No"/>
+        </joinkeys>
+        <joinkeys>
+          <columnMap key="MATCHING_TYPE" value="Levenshtein"/>
+          <columnMap key="SURVIVORSHIP_FUNCTION" value="Concatenate"/>
+          <columnMap key="HANDLE_NULL" value="nullMatchNull"/>
+          <columnMap key="ATTRIBUTE_THRESHOLD" value="1.0"/>
+          <columnMap key="CONFIDENCE_WEIGHT" value="1"/>
+          <columnMap key="INPUT_COLUMN" value="Nom_Rue"/>
+          <columnMap key="CUSTOM_MATCHER" value="&quot;&quot;"/>
+          <columnMap key="TOKENIZATION_TYPE" value="No"/>
+        </joinkeys>
+        <matchParamMap key="INTERVAL_RULE" value="0.85"/>
+        <matchParamMap key="MATCHING_ALGORITHM" value="Simple VSR Matcher"/>
+      </ruleMatchers>
+    </nodeData>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="672" posY="160">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_1" show="false"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_iZghAOjXEeaEtdzMA2lQrg-tMap_1-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="UniqueValue">
+      <column comment="" defaultValue="" key="false" length="-1" name="Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;sequence&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;sequence identifier&quot;,&quot;PARAMETER_VALUE&quot;:&quot;\&quot;s1\&quot; &quot;},{&quot;PARAMETER_NAME&quot;:&quot;start value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;1 &quot;},{&quot;PARAMETER_NAME&quot;:&quot;step&quot;,&quot;PARAMETER_VALUE&quot;:&quot;1 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;Numeric&quot;}"/>
+      </column>
+      <column comment="" key="false" length="-1" name="Nom" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getLastName&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
+      </column>
+      <column comment="" key="false" length="-1" name="Prenom" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getFirstName&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="Num_Rue" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;random&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;min value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;0 &quot;},{&quot;PARAMETER_NAME&quot;:&quot;max value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;100 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;Numeric&quot;}"/>
+      </column>
+      <column comment="" key="false" length="-1" name="Nom_Rue" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getUsStreet&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="CodePostal" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;random&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;min value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;75001 &quot;},{&quot;PARAMETER_NAME&quot;:&quot;max value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;95999 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;Numeric&quot;}"/>
+      </column>
+      <column comment="" key="false" length="-1" name="Ville" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getUsCity&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
+      </column>
+      <column comment="" key="false" length="-1" name="Pays" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;...&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;customize parameter&quot;,&quot;PARAMETER_VALUE&quot;:&quot;\&quot;Afghanistan\&quot;,\r\n\&quot;Albania\&quot;,\r\n\&quot;Antarctica\&quot;,\r\n\&quot;Algeria\&quot;,\r\n\&quot;American Samoa\&quot;,\r\n\&quot;Andorra\&quot;,\r\n\&quot;Angola\&quot;,\r\n\&quot;Antigua and Barbuda\&quot;,\r\n\&quot;Azerbaijan\&quot;,\r\n\&quot;Argentina\&quot;,\r\n\&quot;Australia\&quot;,\r\n\&quot;Austria\&quot;,\r\n\&quot;Bahamas\&quot;,\r\n\&quot;Bahrain\&quot;,\r\n\&quot;Bangladesh\&quot;,\r\n\&quot;Armenia\&quot;,\r\n\&quot;Barbados\&quot;,\r\n\&quot;Belgium\&quot;,\r\n\&quot;Bermuda\&quot;,\r\n\&quot;Bhutan\&quot;,\r\n\&quot;Bolivia\&quot;,\r\n\&quot;Bosnia and Herzegovina\&quot;,\r\n\&quot;Botswana\&quot;,\r\n\&quot;Bouvet Island\&quot;,\r\n\&quot;Brazil\&quot;,\r\n\&quot;Belize\&quot;,\r\n\&quot;British Indian Ocean Territory\&quot;,\r\n\&quot;Solomon Islands\&quot;,\r\n\&quot;British Virgin Islands\&quot;,\r\n\&quot;Brunei Darussalam\&quot;,\r\n\&quot;Bulgaria\&quot;,\r\n\&quot;Myanmar\&quot;,\r\n\&quot;Burundi\&quot;,\r\n\&quot;Belarus\&quot;,\r\n\&quot;Cambodia\&quot;,\r\n\&quot;Cameroon\&quot;,\r\n\&quot;Canada\&quot;,\r\n\&quot;Cape Verde\&quot;,\r\n\&quot;Cayman Islands\&quot;,\r\n\&quot;Central African\&quot;,\r\n\&quot;Sri Lanka\&quot;,\r\n\&quot;Chad\&quot;,\r\n\&quot;Chile\&quot;,\r\n\&quot;China\&quot;,\r\n\&quot;South Africa\&quot;,\r\n\&quot;Zimbabwe\&quot;,\r\n\&quot;Spain\&quot;,\r\n\&quot;Western Sahara\&quot;,\r\n\&quot;Sudan\&quot;,\r\n\&quot;Suriname\&quot;,\r\n\&quot;Svalbard and Jan Mayen\&quot;,\r\n\&quot;Swaziland\&quot;,\r\n\&quot;Sweden\&quot;,\r\n\&quot;Switzerland\&quot;,\r\n\&quot;Syrian Arab Republic\&quot;,\r\n\&quot;Tajikistan\&quot;,\r\n\&quot;Thailand\&quot;,\r\n\&quot;Togo\&quot;,\r\n\&quot;Tokelau\&quot;,\r\n\&quot;Tonga\&quot;,\r\n\&quot;Trinidad and Tobago\&quot;,\r\n\&quot;United Arab Emirates\&quot;,\r\n\&quot;Tunisia\&quot;,\r\n\&quot;Turkey\&quot;,\r\n\&quot;Turkmenistan\&quot;,\r\n\&quot;Turks and Caicos Islands\&quot;,\r\n\&quot;Tuvalu\&quot;,\r\n\&quot;Uganda\&quot;,\r\n\&quot;Ukraine\&quot;,\r\n\&quot;The Former Yugoslav Republic of Macedonia\&quot;,\r\n\&quot;Egypt\r\n\&quot;United Kingdom\&quot;,\r\n\&quot;Isle of Man\&quot;,\r\n\&quot;United Republic Of Tanzania\&quot;,\r\n\&quot;United States\&quot;,\r\n\&quot;U.S. Virgin Islands\&quot;,\r\n\&quot;Burkina Faso\&quot;,\r\n\&quot;Uruguay\&quot;,\r\n\&quot;Uzbekistan\&quot;,\r\n\&quot;Venezuela\&quot;,\r\n\&quot;Wallis and Futuna\&quot;,\r\n\&quot;Samoa\&quot;,\r\n\&quot;Yemen\&quot;,\r\n\&quot;Serbia and Montenegro\&quot;,\r\n\&quot;Zambia\&quot; &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="Telephone" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;random&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;min value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;23467939 &quot;},{&quot;PARAMETER_NAME&quot;:&quot;max value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;93235677 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;Numeric&quot;}"/>
+      </column>
+      <column key="false" length="0" name="GID" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="0" name="GRP_SIZE" nullable="true" precision="0" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="0" name="MASTER" nullable="true" precision="0" sourceType="" type="id_Boolean" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="SCORE" nullable="true" precision="0" sourceType="" type="id_Double" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="GRP_QUALITY" nullable="true" precision="0" sourceType="" type="id_Double" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="FLOW" name="Families">
+      <column comment="" defaultValue="" key="false" length="-1" name="Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;sequence&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;sequence identifier&quot;,&quot;PARAMETER_VALUE&quot;:&quot;\&quot;s1\&quot; &quot;},{&quot;PARAMETER_NAME&quot;:&quot;start value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;1 &quot;},{&quot;PARAMETER_NAME&quot;:&quot;step&quot;,&quot;PARAMETER_VALUE&quot;:&quot;1 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;Numeric&quot;}"/>
+      </column>
+      <column comment="" key="false" length="-1" name="Nom" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getLastName&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
+      </column>
+      <column comment="" key="false" length="-1" name="Prenom" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getFirstName&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="Num_Rue" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;random&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;min value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;0 &quot;},{&quot;PARAMETER_NAME&quot;:&quot;max value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;100 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;Numeric&quot;}"/>
+      </column>
+      <column comment="" key="false" length="-1" name="Nom_Rue" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getUsStreet&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="CodePostal" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;random&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;min value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;75001 &quot;},{&quot;PARAMETER_NAME&quot;:&quot;max value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;95999 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;Numeric&quot;}"/>
+      </column>
+      <column comment="" key="false" length="-1" name="Ville" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getUsCity&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
+      </column>
+      <column comment="" key="false" length="-1" name="Pays" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;...&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;customize parameter&quot;,&quot;PARAMETER_VALUE&quot;:&quot;\&quot;Afghanistan\&quot;,\r\n\&quot;Albania\&quot;,\r\n\&quot;Antarctica\&quot;,\r\n\&quot;Algeria\&quot;,\r\n\&quot;American Samoa\&quot;,\r\n\&quot;Andorra\&quot;,\r\n\&quot;Angola\&quot;,\r\n\&quot;Antigua and Barbuda\&quot;,\r\n\&quot;Azerbaijan\&quot;,\r\n\&quot;Argentina\&quot;,\r\n\&quot;Australia\&quot;,\r\n\&quot;Austria\&quot;,\r\n\&quot;Bahamas\&quot;,\r\n\&quot;Bahrain\&quot;,\r\n\&quot;Bangladesh\&quot;,\r\n\&quot;Armenia\&quot;,\r\n\&quot;Barbados\&quot;,\r\n\&quot;Belgium\&quot;,\r\n\&quot;Bermuda\&quot;,\r\n\&quot;Bhutan\&quot;,\r\n\&quot;Bolivia\&quot;,\r\n\&quot;Bosnia and Herzegovina\&quot;,\r\n\&quot;Botswana\&quot;,\r\n\&quot;Bouvet Island\&quot;,\r\n\&quot;Brazil\&quot;,\r\n\&quot;Belize\&quot;,\r\n\&quot;British Indian Ocean Territory\&quot;,\r\n\&quot;Solomon Islands\&quot;,\r\n\&quot;British Virgin Islands\&quot;,\r\n\&quot;Brunei Darussalam\&quot;,\r\n\&quot;Bulgaria\&quot;,\r\n\&quot;Myanmar\&quot;,\r\n\&quot;Burundi\&quot;,\r\n\&quot;Belarus\&quot;,\r\n\&quot;Cambodia\&quot;,\r\n\&quot;Cameroon\&quot;,\r\n\&quot;Canada\&quot;,\r\n\&quot;Cape Verde\&quot;,\r\n\&quot;Cayman Islands\&quot;,\r\n\&quot;Central African\&quot;,\r\n\&quot;Sri Lanka\&quot;,\r\n\&quot;Chad\&quot;,\r\n\&quot;Chile\&quot;,\r\n\&quot;China\&quot;,\r\n\&quot;South Africa\&quot;,\r\n\&quot;Zimbabwe\&quot;,\r\n\&quot;Spain\&quot;,\r\n\&quot;Western Sahara\&quot;,\r\n\&quot;Sudan\&quot;,\r\n\&quot;Suriname\&quot;,\r\n\&quot;Svalbard and Jan Mayen\&quot;,\r\n\&quot;Swaziland\&quot;,\r\n\&quot;Sweden\&quot;,\r\n\&quot;Switzerland\&quot;,\r\n\&quot;Syrian Arab Republic\&quot;,\r\n\&quot;Tajikistan\&quot;,\r\n\&quot;Thailand\&quot;,\r\n\&quot;Togo\&quot;,\r\n\&quot;Tokelau\&quot;,\r\n\&quot;Tonga\&quot;,\r\n\&quot;Trinidad and Tobago\&quot;,\r\n\&quot;United Arab Emirates\&quot;,\r\n\&quot;Tunisia\&quot;,\r\n\&quot;Turkey\&quot;,\r\n\&quot;Turkmenistan\&quot;,\r\n\&quot;Turks and Caicos Islands\&quot;,\r\n\&quot;Tuvalu\&quot;,\r\n\&quot;Uganda\&quot;,\r\n\&quot;Ukraine\&quot;,\r\n\&quot;The Former Yugoslav Republic of Macedonia\&quot;,\r\n\&quot;Egypt\r\n\&quot;United Kingdom\&quot;,\r\n\&quot;Isle of Man\&quot;,\r\n\&quot;United Republic Of Tanzania\&quot;,\r\n\&quot;United States\&quot;,\r\n\&quot;U.S. Virgin Islands\&quot;,\r\n\&quot;Burkina Faso\&quot;,\r\n\&quot;Uruguay\&quot;,\r\n\&quot;Uzbekistan\&quot;,\r\n\&quot;Venezuela\&quot;,\r\n\&quot;Wallis and Futuna\&quot;,\r\n\&quot;Samoa\&quot;,\r\n\&quot;Yemen\&quot;,\r\n\&quot;Serbia and Montenegro\&quot;,\r\n\&quot;Zambia\&quot; &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="Telephone" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;random&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;min value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;23467939 &quot;},{&quot;PARAMETER_NAME&quot;:&quot;max value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;93235677 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;Numeric&quot;}"/>
+      </column>
+      <column key="false" length="0" name="GID" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="0" name="GRP_SIZE" nullable="true" precision="0" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="0" name="MASTER" nullable="true" precision="0" sourceType="" type="id_Boolean" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="SCORE" nullable="true" precision="0" sourceType="" type="id_Double" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="GRP_QUALITY" nullable="true" precision="0" sourceType="" type="id_Double" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="MapperData">
+      <uiProperties shellMaximized="true"/>
+      <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
+      <outputTables sizeState="INTERMEDIATE" name="UniqueValue" expressionFilter="row2.GRP_SIZE ==1" activateExpressionFilter="true">
+        <mapperTableEntries name="Id" expression="row2.Id " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="Nom" expression="row2.Nom " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Prenom" expression="row2.Prenom " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Num_Rue" expression="row2.Num_Rue " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="Nom_Rue" expression="row2.Nom_Rue " type="id_String" nullable="true"/>
+        <mapperTableEntries name="CodePostal" expression="row2.CodePostal " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="Ville" expression="row2.Ville " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Pays" expression="row2.Pays " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Telephone" expression="row2.Telephone " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="GID" expression="row2.GID " type="id_String" nullable="true"/>
+        <mapperTableEntries name="GRP_SIZE" expression="row2.GRP_SIZE " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="MASTER" expression="row2.MASTER " type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="SCORE" expression="row2.SCORE " type="id_Double" nullable="true"/>
+        <mapperTableEntries name="GRP_QUALITY" expression="row2.GRP_QUALITY " type="id_Double" nullable="true"/>
+      </outputTables>
+      <outputTables sizeState="INTERMEDIATE" name="Families" expressionFilter="row2.GRP_SIZE !=1" activateExpressionFilter="true">
+        <mapperTableEntries name="Id" expression="row2.Id " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="Nom" expression="row2.Nom " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Prenom" expression="row2.Prenom " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Num_Rue" expression="row2.Num_Rue " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="Nom_Rue" expression="row2.Nom_Rue " type="id_String" nullable="true"/>
+        <mapperTableEntries name="CodePostal" expression="row2.CodePostal " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="Ville" expression="row2.Ville " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Pays" expression="row2.Pays " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Telephone" expression="row2.Telephone " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="GID" expression="row2.GID " type="id_String" nullable="true"/>
+        <mapperTableEntries name="GRP_SIZE" expression="row2.GRP_SIZE " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="MASTER" expression="row2.MASTER " type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="SCORE" expression="row2.SCORE " type="id_Double" nullable="true"/>
+        <mapperTableEntries name="GRP_QUALITY" expression="row2.GRP_QUALITY " type="id_Double" nullable="true"/>
+      </outputTables>
+      <inputTables sizeState="INTERMEDIATE" name="row2" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="Id" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="Nom" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Prenom" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Num_Rue" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="Nom_Rue" type="id_String" nullable="true"/>
+        <mapperTableEntries name="CodePostal" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="Ville" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Pays" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Telephone" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="GID" type="id_String" nullable="true"/>
+        <mapperTableEntries name="GRP_SIZE" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="MASTER" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="SCORE" type="id_Double" nullable="true"/>
+        <mapperTableEntries name="GRP_QUALITY" type="id_Double" nullable="true"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="960" posY="32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileOutputDelimited_1" show="false"/>
+    <elementParameter field="CHECK" name="USESTREAM" value="false"/>
+    <elementParameter field="TEXT" name="STREAMNAME" value="outputStream" show="false"/>
+    <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Talend/6.3.1/studio/temp/outputFiles/UniqueValues.csv&quot;"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
+    <elementParameter field="CHECK" name="OS_LINE_SEPARATOR_AS_ROW_SEPARATOR" value="true" show="false"/>
+    <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" value="&quot;\n&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;;&quot;"/>
+    <elementParameter field="CHECK" name="APPEND" value="false"/>
+    <elementParameter field="CHECK" name="INCLUDEHEADER" value="true"/>
+    <elementParameter field="CHECK" name="COMPRESS" value="false"/>
+    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
+    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" value="&quot;,&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" value="&quot;.&quot;" show="false"/>
+    <elementParameter field="CHECK" name="CSV_OPTION" value="false"/>
+    <elementParameter field="TEXT" name="ESCAPE_CHAR" value="&quot;&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="TEXT_ENCLOSURE" value="&quot;&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="CREATE" value="true"/>
+    <elementParameter field="CHECK" name="SPLIT" value="false"/>
+    <elementParameter field="TEXT" name="SPLIT_EVERY" value="1000" show="false"/>
+    <elementParameter field="CHECK" name="FLUSHONROW" value="false"/>
+    <elementParameter field="TEXT" name="FLUSHONROW_NUM" value="1" show="false"/>
+    <elementParameter field="CHECK" name="ROW_MODE" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="DELETE_EMPTYFILE" value="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="90" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="uniqueValues"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFileOutputDelimited_1">
+      <column comment="" defaultValue="" key="false" length="-1" name="Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;sequence&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;sequence identifier&quot;,&quot;PARAMETER_VALUE&quot;:&quot;\&quot;s1\&quot; &quot;},{&quot;PARAMETER_NAME&quot;:&quot;start value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;1 &quot;},{&quot;PARAMETER_NAME&quot;:&quot;step&quot;,&quot;PARAMETER_VALUE&quot;:&quot;1 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;Numeric&quot;}"/>
+      </column>
+      <column comment="" key="false" length="-1" name="Nom" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getLastName&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
+      </column>
+      <column comment="" key="false" length="-1" name="Prenom" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getFirstName&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="Num_Rue" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;random&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;min value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;0 &quot;},{&quot;PARAMETER_NAME&quot;:&quot;max value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;100 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;Numeric&quot;}"/>
+      </column>
+      <column comment="" key="false" length="-1" name="Nom_Rue" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getUsStreet&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="CodePostal" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;random&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;min value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;75001 &quot;},{&quot;PARAMETER_NAME&quot;:&quot;max value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;95999 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;Numeric&quot;}"/>
+      </column>
+      <column comment="" key="false" length="-1" name="Ville" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getUsCity&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
+      </column>
+      <column comment="" key="false" length="-1" name="Pays" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;...&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;customize parameter&quot;,&quot;PARAMETER_VALUE&quot;:&quot;\&quot;Afghanistan\&quot;,\r\n\&quot;Albania\&quot;,\r\n\&quot;Antarctica\&quot;,\r\n\&quot;Algeria\&quot;,\r\n\&quot;American Samoa\&quot;,\r\n\&quot;Andorra\&quot;,\r\n\&quot;Angola\&quot;,\r\n\&quot;Antigua and Barbuda\&quot;,\r\n\&quot;Azerbaijan\&quot;,\r\n\&quot;Argentina\&quot;,\r\n\&quot;Australia\&quot;,\r\n\&quot;Austria\&quot;,\r\n\&quot;Bahamas\&quot;,\r\n\&quot;Bahrain\&quot;,\r\n\&quot;Bangladesh\&quot;,\r\n\&quot;Armenia\&quot;,\r\n\&quot;Barbados\&quot;,\r\n\&quot;Belgium\&quot;,\r\n\&quot;Bermuda\&quot;,\r\n\&quot;Bhutan\&quot;,\r\n\&quot;Bolivia\&quot;,\r\n\&quot;Bosnia and Herzegovina\&quot;,\r\n\&quot;Botswana\&quot;,\r\n\&quot;Bouvet Island\&quot;,\r\n\&quot;Brazil\&quot;,\r\n\&quot;Belize\&quot;,\r\n\&quot;British Indian Ocean Territory\&quot;,\r\n\&quot;Solomon Islands\&quot;,\r\n\&quot;British Virgin Islands\&quot;,\r\n\&quot;Brunei Darussalam\&quot;,\r\n\&quot;Bulgaria\&quot;,\r\n\&quot;Myanmar\&quot;,\r\n\&quot;Burundi\&quot;,\r\n\&quot;Belarus\&quot;,\r\n\&quot;Cambodia\&quot;,\r\n\&quot;Cameroon\&quot;,\r\n\&quot;Canada\&quot;,\r\n\&quot;Cape Verde\&quot;,\r\n\&quot;Cayman Islands\&quot;,\r\n\&quot;Central African\&quot;,\r\n\&quot;Sri Lanka\&quot;,\r\n\&quot;Chad\&quot;,\r\n\&quot;Chile\&quot;,\r\n\&quot;China\&quot;,\r\n\&quot;South Africa\&quot;,\r\n\&quot;Zimbabwe\&quot;,\r\n\&quot;Spain\&quot;,\r\n\&quot;Western Sahara\&quot;,\r\n\&quot;Sudan\&quot;,\r\n\&quot;Suriname\&quot;,\r\n\&quot;Svalbard and Jan Mayen\&quot;,\r\n\&quot;Swaziland\&quot;,\r\n\&quot;Sweden\&quot;,\r\n\&quot;Switzerland\&quot;,\r\n\&quot;Syrian Arab Republic\&quot;,\r\n\&quot;Tajikistan\&quot;,\r\n\&quot;Thailand\&quot;,\r\n\&quot;Togo\&quot;,\r\n\&quot;Tokelau\&quot;,\r\n\&quot;Tonga\&quot;,\r\n\&quot;Trinidad and Tobago\&quot;,\r\n\&quot;United Arab Emirates\&quot;,\r\n\&quot;Tunisia\&quot;,\r\n\&quot;Turkey\&quot;,\r\n\&quot;Turkmenistan\&quot;,\r\n\&quot;Turks and Caicos Islands\&quot;,\r\n\&quot;Tuvalu\&quot;,\r\n\&quot;Uganda\&quot;,\r\n\&quot;Ukraine\&quot;,\r\n\&quot;The Former Yugoslav Republic of Macedonia\&quot;,\r\n\&quot;Egypt\r\n\&quot;United Kingdom\&quot;,\r\n\&quot;Isle of Man\&quot;,\r\n\&quot;United Republic Of Tanzania\&quot;,\r\n\&quot;United States\&quot;,\r\n\&quot;U.S. Virgin Islands\&quot;,\r\n\&quot;Burkina Faso\&quot;,\r\n\&quot;Uruguay\&quot;,\r\n\&quot;Uzbekistan\&quot;,\r\n\&quot;Venezuela\&quot;,\r\n\&quot;Wallis and Futuna\&quot;,\r\n\&quot;Samoa\&quot;,\r\n\&quot;Yemen\&quot;,\r\n\&quot;Serbia and Montenegro\&quot;,\r\n\&quot;Zambia\&quot; &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="Telephone" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;random&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;min value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;23467939 &quot;},{&quot;PARAMETER_NAME&quot;:&quot;max value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;93235677 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;Numeric&quot;}"/>
+      </column>
+      <column key="false" length="0" name="GID" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="0" name="GRP_SIZE" nullable="true" precision="0" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="0" name="MASTER" nullable="true" precision="0" sourceType="" type="id_Boolean" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="SCORE" nullable="true" precision="0" sourceType="" type="id_Double" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="GRP_QUALITY" nullable="true" precision="0" sourceType="" type="id_Double" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="960" posY="288">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileOutputDelimited_2" show="false"/>
+    <elementParameter field="CHECK" name="USESTREAM" value="false"/>
+    <elementParameter field="TEXT" name="STREAMNAME" value="outputStream" show="false"/>
+    <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Talend/6.3.1/studio/temp/outputFiles/FamiliesValues.csv&quot;"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
+    <elementParameter field="CHECK" name="OS_LINE_SEPARATOR_AS_ROW_SEPARATOR" value="true" show="false"/>
+    <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" value="&quot;\n&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;;&quot;"/>
+    <elementParameter field="CHECK" name="APPEND" value="false"/>
+    <elementParameter field="CHECK" name="INCLUDEHEADER" value="true"/>
+    <elementParameter field="CHECK" name="COMPRESS" value="false"/>
+    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
+    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" value="&quot;,&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" value="&quot;.&quot;" show="false"/>
+    <elementParameter field="CHECK" name="CSV_OPTION" value="false"/>
+    <elementParameter field="TEXT" name="ESCAPE_CHAR" value="&quot;&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="TEXT_ENCLOSURE" value="&quot;&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="CREATE" value="true"/>
+    <elementParameter field="CHECK" name="SPLIT" value="false"/>
+    <elementParameter field="TEXT" name="SPLIT_EVERY" value="1000" show="false"/>
+    <elementParameter field="CHECK" name="FLUSHONROW" value="false"/>
+    <elementParameter field="TEXT" name="FLUSHONROW_NUM" value="1" show="false"/>
+    <elementParameter field="CHECK" name="ROW_MODE" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="DELETE_EMPTYFILE" value="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="90" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="Families"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFileOutputDelimited_2">
+      <column comment="" defaultValue="" key="false" length="-1" name="Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;sequence&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;sequence identifier&quot;,&quot;PARAMETER_VALUE&quot;:&quot;\&quot;s1\&quot; &quot;},{&quot;PARAMETER_NAME&quot;:&quot;start value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;1 &quot;},{&quot;PARAMETER_NAME&quot;:&quot;step&quot;,&quot;PARAMETER_VALUE&quot;:&quot;1 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;Numeric&quot;}"/>
+      </column>
+      <column comment="" key="false" length="-1" name="Nom" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getLastName&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
+      </column>
+      <column comment="" key="false" length="-1" name="Prenom" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getFirstName&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="Num_Rue" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;random&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;min value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;0 &quot;},{&quot;PARAMETER_NAME&quot;:&quot;max value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;100 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;Numeric&quot;}"/>
+      </column>
+      <column comment="" key="false" length="-1" name="Nom_Rue" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getUsStreet&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="CodePostal" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;random&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;min value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;75001 &quot;},{&quot;PARAMETER_NAME&quot;:&quot;max value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;95999 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;Numeric&quot;}"/>
+      </column>
+      <column comment="" key="false" length="-1" name="Ville" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getUsCity&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
+      </column>
+      <column comment="" key="false" length="-1" name="Pays" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;...&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;customize parameter&quot;,&quot;PARAMETER_VALUE&quot;:&quot;\&quot;Afghanistan\&quot;,\r\n\&quot;Albania\&quot;,\r\n\&quot;Antarctica\&quot;,\r\n\&quot;Algeria\&quot;,\r\n\&quot;American Samoa\&quot;,\r\n\&quot;Andorra\&quot;,\r\n\&quot;Angola\&quot;,\r\n\&quot;Antigua and Barbuda\&quot;,\r\n\&quot;Azerbaijan\&quot;,\r\n\&quot;Argentina\&quot;,\r\n\&quot;Australia\&quot;,\r\n\&quot;Austria\&quot;,\r\n\&quot;Bahamas\&quot;,\r\n\&quot;Bahrain\&quot;,\r\n\&quot;Bangladesh\&quot;,\r\n\&quot;Armenia\&quot;,\r\n\&quot;Barbados\&quot;,\r\n\&quot;Belgium\&quot;,\r\n\&quot;Bermuda\&quot;,\r\n\&quot;Bhutan\&quot;,\r\n\&quot;Bolivia\&quot;,\r\n\&quot;Bosnia and Herzegovina\&quot;,\r\n\&quot;Botswana\&quot;,\r\n\&quot;Bouvet Island\&quot;,\r\n\&quot;Brazil\&quot;,\r\n\&quot;Belize\&quot;,\r\n\&quot;British Indian Ocean Territory\&quot;,\r\n\&quot;Solomon Islands\&quot;,\r\n\&quot;British Virgin Islands\&quot;,\r\n\&quot;Brunei Darussalam\&quot;,\r\n\&quot;Bulgaria\&quot;,\r\n\&quot;Myanmar\&quot;,\r\n\&quot;Burundi\&quot;,\r\n\&quot;Belarus\&quot;,\r\n\&quot;Cambodia\&quot;,\r\n\&quot;Cameroon\&quot;,\r\n\&quot;Canada\&quot;,\r\n\&quot;Cape Verde\&quot;,\r\n\&quot;Cayman Islands\&quot;,\r\n\&quot;Central African\&quot;,\r\n\&quot;Sri Lanka\&quot;,\r\n\&quot;Chad\&quot;,\r\n\&quot;Chile\&quot;,\r\n\&quot;China\&quot;,\r\n\&quot;South Africa\&quot;,\r\n\&quot;Zimbabwe\&quot;,\r\n\&quot;Spain\&quot;,\r\n\&quot;Western Sahara\&quot;,\r\n\&quot;Sudan\&quot;,\r\n\&quot;Suriname\&quot;,\r\n\&quot;Svalbard and Jan Mayen\&quot;,\r\n\&quot;Swaziland\&quot;,\r\n\&quot;Sweden\&quot;,\r\n\&quot;Switzerland\&quot;,\r\n\&quot;Syrian Arab Republic\&quot;,\r\n\&quot;Tajikistan\&quot;,\r\n\&quot;Thailand\&quot;,\r\n\&quot;Togo\&quot;,\r\n\&quot;Tokelau\&quot;,\r\n\&quot;Tonga\&quot;,\r\n\&quot;Trinidad and Tobago\&quot;,\r\n\&quot;United Arab Emirates\&quot;,\r\n\&quot;Tunisia\&quot;,\r\n\&quot;Turkey\&quot;,\r\n\&quot;Turkmenistan\&quot;,\r\n\&quot;Turks and Caicos Islands\&quot;,\r\n\&quot;Tuvalu\&quot;,\r\n\&quot;Uganda\&quot;,\r\n\&quot;Ukraine\&quot;,\r\n\&quot;The Former Yugoslav Republic of Macedonia\&quot;,\r\n\&quot;Egypt\r\n\&quot;United Kingdom\&quot;,\r\n\&quot;Isle of Man\&quot;,\r\n\&quot;United Republic Of Tanzania\&quot;,\r\n\&quot;United States\&quot;,\r\n\&quot;U.S. Virgin Islands\&quot;,\r\n\&quot;Burkina Faso\&quot;,\r\n\&quot;Uruguay\&quot;,\r\n\&quot;Uzbekistan\&quot;,\r\n\&quot;Venezuela\&quot;,\r\n\&quot;Wallis and Futuna\&quot;,\r\n\&quot;Samoa\&quot;,\r\n\&quot;Yemen\&quot;,\r\n\&quot;Serbia and Montenegro\&quot;,\r\n\&quot;Zambia\&quot; &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="Telephone" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;random&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;min value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;23467939 &quot;},{&quot;PARAMETER_NAME&quot;:&quot;max value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;93235677 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;Numeric&quot;}"/>
+      </column>
+      <column key="false" length="0" name="GID" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="0" name="GRP_SIZE" nullable="true" precision="0" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="0" name="MASTER" nullable="true" precision="0" sourceType="" type="id_Boolean" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="SCORE" nullable="true" precision="0" sourceType="" type="id_Double" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="GRP_QUALITY" nullable="true" precision="0" sourceType="" type="id_Double" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tRowGenerator_1" offsetLabelX="0" offsetLabelY="0" source="tRowGenerator_1" target="tMatchGroup_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tMatchGroup_1" offsetLabelX="0" offsetLabelY="0" source="tMatchGroup_1" target="tMap_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="UniqueValue" lineStyle="0" metaname="UniqueValue" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_1" target="tFileOutputDelimited_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="UniqueValue" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="Families" lineStyle="0" metaname="Families" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_1" target="tFileOutputDelimited_2">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="Families" show="false"/>
+  </connection>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRowGenerator_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
 </talendfile:ProcessType>
