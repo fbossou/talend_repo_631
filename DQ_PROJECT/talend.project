@@ -807,14 +807,8 @@
       <relatedItems xmi:id="_b3i2oejcEeaEtdzMA2lQrg" id="DQTechnical" version="Latest" type="routine"/>
       <relatedItems xmi:id="_b3i2oujcEeaEtdzMA2lQrg" id="DataQualityDependencies" version="Latest" type="routine"/>
       <relatedItems xmi:id="_b3i2o-jcEeaEtdzMA2lQrg" id="A2_standardizeaddressTstandardizerow_1" version="Latest" type="routine"/>
-      <relatedItems xmi:id="_e0KpoOjlEeaEtdzMA2lQrg" id="_YtbU4OjlEeaEtdzMA2lQrg" version="Latest" type="survivorshipRuleRelation"/>
-      <relatedItems xmi:id="_e0KpoejlEeaEtdzMA2lQrg" id="_ckftEOjlEeaEtdzMA2lQrg" version="Latest" type="survivorshipRuleRelation"/>
-      <relatedItems xmi:id="_e0LQsOjlEeaEtdzMA2lQrg" id="_aYqHoOjlEeaEtdzMA2lQrg" version="Latest" type="survivorshipRuleRelation"/>
-      <relatedItems xmi:id="_e0LQsejlEeaEtdzMA2lQrg" id="_XeYu4OjlEeaEtdzMA2lQrg" version="Latest" type="survivorshipRuleRelation"/>
-      <relatedItems xmi:id="_e0LQsujlEeaEtdzMA2lQrg" id="_X0T7kOjlEeaEtdzMA2lQrg" version="Latest" type="survivorshipRuleRelation"/>
-      <relatedItems xmi:id="_e0LQs-jlEeaEtdzMA2lQrg" id="_b1J60OjlEeaEtdzMA2lQrg" version="Latest" type="survivorshipRuleRelation"/>
-      <relatedItems xmi:id="_e0LQtOjlEeaEtdzMA2lQrg" id="_Zga4EOjlEeaEtdzMA2lQrg" version="Latest" type="survivorshipRuleRelation"/>
-      <relatedItems xmi:id="_e0LQtejlEeaEtdzMA2lQrg" id="_bILgEOjlEeaEtdzMA2lQrg" version="Latest" type="survivorshipRuleRelation"/>
+      <relatedItems xmi:id="_GZEXQOjmEeaEtdzMA2lQrg" id="_EadVgOjmEeaEtdzMA2lQrg" version="Latest" type="survivorshipRuleRelation"/>
+      <relatedItems xmi:id="_GZEXQejmEeaEtdzMA2lQrg" id="_E5RYcOjmEeaEtdzMA2lQrg" version="Latest" type="survivorshipRuleRelation"/>
     </ItemsRelations>
     <migrationTask xmi:id="_SUvmQOi-EeaEtdzMA2lQrg" id="org.talend.repository.localprovider.RemoveRoutineFolderTask" breaks="5.1.1" version="5.1.2" status="noimpact"/>
     <migrationTask xmi:id="_SUvmQei-EeaEtdzMA2lQrg" id="org.talend.repository.localprovider.model.migration.ChangeXmiSerialization" breaks="5.1.1" version="5.1.2" status="noimpact"/>

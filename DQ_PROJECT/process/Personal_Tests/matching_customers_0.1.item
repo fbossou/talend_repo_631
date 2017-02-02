@@ -165,7 +165,7 @@
       </column>
     </metadata>
   </node>
-  <node componentName="tMatchGroup" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="160">
+  <node componentName="tMatchGroup" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="256" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMatchGroup_1" show="false"/>
     <elementParameter field="EXTERNAL" name="PREVIEW" value=""/>
     <elementParameter field="CHECK" name="GID_USE_STRING" value="true" show="false"/>
@@ -385,14 +385,8 @@
       <elementValue elementRef="IGNORE_NULL" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <elementParameter field="SURVIVOR_RELATION" name="drools" value="_XeYu4OjlEeaEtdzMA2lQrg" show="false"/>
-    <elementParameter field="SURVIVOR_RELATION" name="Prenom" value="_X0T7kOjlEeaEtdzMA2lQrg" show="false"/>
-    <elementParameter field="SURVIVOR_RELATION" name="Nom_Rue" value="_YtbU4OjlEeaEtdzMA2lQrg" show="false"/>
-    <elementParameter field="SURVIVOR_RELATION" name="Nom" value="_Zga4EOjlEeaEtdzMA2lQrg" show="false"/>
-    <elementParameter field="SURVIVOR_RELATION" name="CodePostal" value="_aYqHoOjlEeaEtdzMA2lQrg" show="false"/>
-    <elementParameter field="SURVIVOR_RELATION" name="Pays" value="_bILgEOjlEeaEtdzMA2lQrg" show="false"/>
-    <elementParameter field="SURVIVOR_RELATION" name="Ville" value="_b1J60OjlEeaEtdzMA2lQrg" show="false"/>
-    <elementParameter field="SURVIVOR_RELATION" name="SurvivorFlow" value="_ckftEOjlEeaEtdzMA2lQrg" show="false"/>
+    <elementParameter field="SURVIVOR_RELATION" name="drools" value="_EadVgOjmEeaEtdzMA2lQrg" show="false"/>
+    <elementParameter field="SURVIVOR_RELATION" name="Prenom" value="_E5RYcOjmEeaEtdzMA2lQrg" show="false"/>
     <metadata connector="FLOW" name="tRuleSurvivorship_1">
       <column comment="" defaultValue="" key="false" length="-1" name="Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
         <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;sequence&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;sequence identifier&quot;,&quot;PARAMETER_VALUE&quot;:&quot;\&quot;s1\&quot; &quot;},{&quot;PARAMETER_NAME&quot;:&quot;start value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;1 &quot;},{&quot;PARAMETER_NAME&quot;:&quot;step&quot;,&quot;PARAMETER_VALUE&quot;:&quot;1 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;Numeric&quot;}"/>
