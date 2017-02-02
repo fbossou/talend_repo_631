@@ -1,0 +1,14 @@
+package org.talend.survivorship.matching.customer 
+
+rule "Pays"
+    no-loop true
+    dialect "mvel"
+    ruleflow-group "PaysGroup"
+when
+    $input : RecordIn( dataset.isMostCommon( pays, "Pays", false) )  
+then
+    dataset.survive( $input.TALEND_INTERNAL_ID, "Pays", drools.getRule().getName());
+
+end
+
+
