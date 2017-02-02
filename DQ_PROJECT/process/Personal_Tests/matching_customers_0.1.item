@@ -181,9 +181,9 @@
     </elementParameter>
     <elementParameter field="CHECK" name="SHOW_BASIC_PARAMETER" value="false" show="false"/>
     <elementParameter field="TEXT" name="INTERVAL" value="0.85" show="false"/>
-    <elementParameter field="CHECK" name="STORE_ON_DISK" value="false"/>
-    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="200000" show="false"/>
-    <elementParameter field="DIRECTORY" name="TMP_DIRECTORY" value="&quot;C:/Talend/6.3.1/studio/workspace&quot;" show="false"/>
+    <elementParameter field="CHECK" name="STORE_ON_DISK" value="true"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="200000"/>
+    <elementParameter field="DIRECTORY" name="TMP_DIRECTORY" value="&quot;C:/Talend/6.3.1/studio/workspace&quot;"/>
     <elementParameter field="CHECK" name="SEPARATE_OUTPUT" value="false"/>
     <elementParameter field="TEXT" name="CONFIDENCE_THRESHOLD" value="0.9" show="false"/>
     <elementParameter field="CHECK" name="LINK_WITH_PREVIOUS" value="false"/>
