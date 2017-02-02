@@ -115,7 +115,7 @@
     <routinesParameter id="_jFtsAOJpEeCmJNdA0HkfKA" name="A2_standardizeaddressTstandardizerow_1"/>
     <routinesParameter id="_wU5qIOJpEeCmJNdA0HkfKA" name="Products_parsingTstandardizerow_1"/>
   </parameters>
-  <node componentName="tRowGenerator" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="160" posY="160">
+  <node componentName="tRowGenerator" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="32" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRowGenerator_1" show="false"/>
     <elementParameter field="TEXT" name="NB_ROWS" value="5000" show="false"/>
     <elementParameter field="TABLE" name="VALUES" show="false">
@@ -165,7 +165,7 @@
       </column>
     </metadata>
   </node>
-  <node componentName="tMatchGroup" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="448" posY="160">
+  <node componentName="tMatchGroup" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMatchGroup_1" show="false"/>
     <elementParameter field="EXTERNAL" name="PREVIEW" value=""/>
     <elementParameter field="CHECK" name="GID_USE_STRING" value="true" show="false"/>
@@ -334,6 +334,99 @@
       </ruleMatchers>
     </nodeData>
   </node>
+  <node componentName="tRuleSurvivorship" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="512" posY="160">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRuleSurvivorship_1" show="false"/>
+    <elementParameter field="TEXT" name="PACKAGE_NAME" value="&quot;org.talend.survivorship.matching.customer&quot;"/>
+    <elementParameter field="GENERATE_SURVIVORSHIP_RULES_CONTROLLER" name="GEN_SURVIVORSHIP_RULES" value="false"/>
+    <elementParameter field="PREV_COLUMN_LIST" name="GRP_ID" value="GID"/>
+    <elementParameter field="PREV_COLUMN_LIST" name="GRP_SIZE" value="GRP_SIZE"/>
+    <elementParameter field="TABLE" name="OPERATIONS">
+      <elementValue elementRef="RELATION" value="SEQ"/>
+      <elementValue elementRef="RULE_NAME" value="&quot;Nom&quot;"/>
+      <elementValue elementRef="INPUT_COLUMN" value="Nom"/>
+      <elementValue elementRef="FUNCTION" value="MostCommon"/>
+      <elementValue elementRef="VALUE" value="&quot;&quot;"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="Nom"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
+      <elementValue elementRef="RELATION" value="SEQ"/>
+      <elementValue elementRef="RULE_NAME" value="&quot;Prenom&quot;"/>
+      <elementValue elementRef="INPUT_COLUMN" value="Prenom"/>
+      <elementValue elementRef="FUNCTION" value="MostCommon"/>
+      <elementValue elementRef="VALUE" value="&quot;&quot;"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="Prenom"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
+      <elementValue elementRef="RELATION" value="SEQ"/>
+      <elementValue elementRef="RULE_NAME" value="&quot;Nom_Rue&quot;"/>
+      <elementValue elementRef="INPUT_COLUMN" value="Nom_Rue"/>
+      <elementValue elementRef="FUNCTION" value="MostCommon"/>
+      <elementValue elementRef="VALUE" value="&quot;&quot;"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="Nom_Rue"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
+      <elementValue elementRef="RELATION" value="SEQ"/>
+      <elementValue elementRef="RULE_NAME" value="&quot;Ville&quot;"/>
+      <elementValue elementRef="INPUT_COLUMN" value="Ville"/>
+      <elementValue elementRef="FUNCTION" value="MostCommon"/>
+      <elementValue elementRef="VALUE" value="&quot;&quot;"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="Ville"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
+      <elementValue elementRef="RELATION" value="SEQ"/>
+      <elementValue elementRef="RULE_NAME" value="&quot;CodePostal&quot;"/>
+      <elementValue elementRef="INPUT_COLUMN" value="CodePostal"/>
+      <elementValue elementRef="FUNCTION" value="MatchRegex"/>
+      <elementValue elementRef="VALUE" value="&quot;\\d{5}&quot;"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="CodePostal"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
+      <elementValue elementRef="RELATION" value="SEQ"/>
+      <elementValue elementRef="RULE_NAME" value="&quot;Pays&quot;"/>
+      <elementValue elementRef="INPUT_COLUMN" value="Pays"/>
+      <elementValue elementRef="FUNCTION" value="MostCommon"/>
+      <elementValue elementRef="VALUE" value="&quot;&quot;"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="Pays"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="SURVIVOR_RELATION" name="drools" value="_XeYu4OjlEeaEtdzMA2lQrg" show="false"/>
+    <elementParameter field="SURVIVOR_RELATION" name="Prenom" value="_X0T7kOjlEeaEtdzMA2lQrg" show="false"/>
+    <elementParameter field="SURVIVOR_RELATION" name="Nom_Rue" value="_YtbU4OjlEeaEtdzMA2lQrg" show="false"/>
+    <elementParameter field="SURVIVOR_RELATION" name="Nom" value="_Zga4EOjlEeaEtdzMA2lQrg" show="false"/>
+    <elementParameter field="SURVIVOR_RELATION" name="CodePostal" value="_aYqHoOjlEeaEtdzMA2lQrg" show="false"/>
+    <elementParameter field="SURVIVOR_RELATION" name="Pays" value="_bILgEOjlEeaEtdzMA2lQrg" show="false"/>
+    <elementParameter field="SURVIVOR_RELATION" name="Ville" value="_b1J60OjlEeaEtdzMA2lQrg" show="false"/>
+    <elementParameter field="SURVIVOR_RELATION" name="SurvivorFlow" value="_ckftEOjlEeaEtdzMA2lQrg" show="false"/>
+    <metadata connector="FLOW" name="tRuleSurvivorship_1">
+      <column comment="" defaultValue="" key="false" length="-1" name="Id" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;sequence&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;sequence identifier&quot;,&quot;PARAMETER_VALUE&quot;:&quot;\&quot;s1\&quot; &quot;},{&quot;PARAMETER_NAME&quot;:&quot;start value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;1 &quot;},{&quot;PARAMETER_NAME&quot;:&quot;step&quot;,&quot;PARAMETER_VALUE&quot;:&quot;1 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;Numeric&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="Nom" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getLastName&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="Prenom" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getFirstName&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="Num_Rue" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;random&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;min value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;0 &quot;},{&quot;PARAMETER_NAME&quot;:&quot;max value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;100 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;Numeric&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="Nom_Rue" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getUsStreet&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="CodePostal" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;random&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;min value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;75001 &quot;},{&quot;PARAMETER_NAME&quot;:&quot;max value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;95999 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;Numeric&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="Ville" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getUsCity&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="Pays" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;...&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;customize parameter&quot;,&quot;PARAMETER_VALUE&quot;:&quot;\&quot;Afghanistan\&quot;,\r\n\&quot;Albania\&quot;,\r\n\&quot;Antarctica\&quot;,\r\n\&quot;Algeria\&quot;,\r\n\&quot;American Samoa\&quot;,\r\n\&quot;Andorra\&quot;,\r\n\&quot;Angola\&quot;,\r\n\&quot;Antigua and Barbuda\&quot;,\r\n\&quot;Azerbaijan\&quot;,\r\n\&quot;Argentina\&quot;,\r\n\&quot;Australia\&quot;,\r\n\&quot;Austria\&quot;,\r\n\&quot;Bahamas\&quot;,\r\n\&quot;Bahrain\&quot;,\r\n\&quot;Bangladesh\&quot;,\r\n\&quot;Armenia\&quot;,\r\n\&quot;Barbados\&quot;,\r\n\&quot;Belgium\&quot;,\r\n\&quot;Bermuda\&quot;,\r\n\&quot;Bhutan\&quot;,\r\n\&quot;Bolivia\&quot;,\r\n\&quot;Bosnia and Herzegovina\&quot;,\r\n\&quot;Botswana\&quot;,\r\n\&quot;Bouvet Island\&quot;,\r\n\&quot;Brazil\&quot;,\r\n\&quot;Belize\&quot;,\r\n\&quot;British Indian Ocean Territory\&quot;,\r\n\&quot;Solomon Islands\&quot;,\r\n\&quot;British Virgin Islands\&quot;,\r\n\&quot;Brunei Darussalam\&quot;,\r\n\&quot;Bulgaria\&quot;,\r\n\&quot;Myanmar\&quot;,\r\n\&quot;Burundi\&quot;,\r\n\&quot;Belarus\&quot;,\r\n\&quot;Cambodia\&quot;,\r\n\&quot;Cameroon\&quot;,\r\n\&quot;Canada\&quot;,\r\n\&quot;Cape Verde\&quot;,\r\n\&quot;Cayman Islands\&quot;,\r\n\&quot;Central African\&quot;,\r\n\&quot;Sri Lanka\&quot;,\r\n\&quot;Chad\&quot;,\r\n\&quot;Chile\&quot;,\r\n\&quot;China\&quot;,\r\n\&quot;South Africa\&quot;,\r\n\&quot;Zimbabwe\&quot;,\r\n\&quot;Spain\&quot;,\r\n\&quot;Western Sahara\&quot;,\r\n\&quot;Sudan\&quot;,\r\n\&quot;Suriname\&quot;,\r\n\&quot;Svalbard and Jan Mayen\&quot;,\r\n\&quot;Swaziland\&quot;,\r\n\&quot;Sweden\&quot;,\r\n\&quot;Switzerland\&quot;,\r\n\&quot;Syrian Arab Republic\&quot;,\r\n\&quot;Tajikistan\&quot;,\r\n\&quot;Thailand\&quot;,\r\n\&quot;Togo\&quot;,\r\n\&quot;Tokelau\&quot;,\r\n\&quot;Tonga\&quot;,\r\n\&quot;Trinidad and Tobago\&quot;,\r\n\&quot;United Arab Emirates\&quot;,\r\n\&quot;Tunisia\&quot;,\r\n\&quot;Turkey\&quot;,\r\n\&quot;Turkmenistan\&quot;,\r\n\&quot;Turks and Caicos Islands\&quot;,\r\n\&quot;Tuvalu\&quot;,\r\n\&quot;Uganda\&quot;,\r\n\&quot;Ukraine\&quot;,\r\n\&quot;The Former Yugoslav Republic of Macedonia\&quot;,\r\n\&quot;Egypt\r\n\&quot;United Kingdom\&quot;,\r\n\&quot;Isle of Man\&quot;,\r\n\&quot;United Republic Of Tanzania\&quot;,\r\n\&quot;United States\&quot;,\r\n\&quot;U.S. Virgin Islands\&quot;,\r\n\&quot;Burkina Faso\&quot;,\r\n\&quot;Uruguay\&quot;,\r\n\&quot;Uzbekistan\&quot;,\r\n\&quot;Venezuela\&quot;,\r\n\&quot;Wallis and Futuna\&quot;,\r\n\&quot;Samoa\&quot;,\r\n\&quot;Yemen\&quot;,\r\n\&quot;Serbia and Montenegro\&quot;,\r\n\&quot;Zambia\&quot; &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;&quot;}"/>
+      </column>
+      <column defaultValue="" key="false" length="0" name="GID" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="0" name="GRP_SIZE" nullable="true" precision="0" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="0" name="MASTER" nullable="true" precision="0" sourceType="" type="id_Boolean" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="SCORE" nullable="true" precision="0" sourceType="" type="id_Double" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="GRP_QUALITY" nullable="true" precision="0" sourceType="" type="id_Double" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="0" name="SURVIVOR" nullable="true" precision="0" sourceType="" type="id_Boolean" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="0" name="CONFLICT" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="672" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_1" show="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
@@ -411,37 +504,37 @@
     <nodeData xsi:type="MapperData">
       <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
-      <outputTables sizeState="INTERMEDIATE" name="UniqueValue" expressionFilter="row2.GRP_SIZE ==1" activateExpressionFilter="true">
-        <mapperTableEntries name="Id" expression="row2.Id " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="Nom" expression="row2.Nom " type="id_String" nullable="true"/>
-        <mapperTableEntries name="Prenom" expression="row2.Prenom " type="id_String" nullable="true"/>
-        <mapperTableEntries name="Num_Rue" expression="row2.Num_Rue " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="Nom_Rue" expression="row2.Nom_Rue " type="id_String" nullable="true"/>
-        <mapperTableEntries name="CodePostal" expression="row2.CodePostal " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="Ville" expression="row2.Ville " type="id_String" nullable="true"/>
-        <mapperTableEntries name="Pays" expression="row2.Pays " type="id_String" nullable="true"/>
-        <mapperTableEntries name="GID" expression="row2.GID " type="id_String" nullable="true"/>
-        <mapperTableEntries name="GRP_SIZE" expression="row2.GRP_SIZE " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="MASTER" expression="row2.MASTER " type="id_Boolean" nullable="true"/>
-        <mapperTableEntries name="SCORE" expression="row2.SCORE " type="id_Double" nullable="true"/>
-        <mapperTableEntries name="GRP_QUALITY" expression="row2.GRP_QUALITY " type="id_Double" nullable="true"/>
+      <outputTables sizeState="INTERMEDIATE" name="UniqueValue" expressionFilter="row3.GRP_SIZE ==1" activateExpressionFilter="true">
+        <mapperTableEntries name="Id" expression="row3.Id " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="Nom" expression="row3.Nom " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Prenom" expression="row3.Prenom " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Num_Rue" expression="row3.Num_Rue " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="Nom_Rue" expression="row3.Nom_Rue " type="id_String" nullable="true"/>
+        <mapperTableEntries name="CodePostal" expression="row3.CodePostal " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="Ville" expression="row3.Ville " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Pays" expression="row3.Pays " type="id_String" nullable="true"/>
+        <mapperTableEntries name="GID" expression="row3.GID " type="id_String" nullable="true"/>
+        <mapperTableEntries name="GRP_SIZE" expression="row3.GRP_SIZE " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="MASTER" expression="row3.MASTER " type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="SCORE" expression="row3.SCORE " type="id_Double" nullable="true"/>
+        <mapperTableEntries name="GRP_QUALITY" expression="row3.GRP_QUALITY " type="id_Double" nullable="true"/>
       </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="Families" expressionFilter="row2.GRP_SIZE !=1" activateExpressionFilter="true">
-        <mapperTableEntries name="Id" expression="row2.Id " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="Nom" expression="row2.Nom " type="id_String" nullable="true"/>
-        <mapperTableEntries name="Prenom" expression="row2.Prenom " type="id_String" nullable="true"/>
-        <mapperTableEntries name="Num_Rue" expression="row2.Num_Rue " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="Nom_Rue" expression="row2.Nom_Rue " type="id_String" nullable="true"/>
-        <mapperTableEntries name="CodePostal" expression="row2.CodePostal " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="Ville" expression="row2.Ville " type="id_String" nullable="true"/>
-        <mapperTableEntries name="Pays" expression="row2.Pays " type="id_String" nullable="true"/>
-        <mapperTableEntries name="GID" expression="row2.GID " type="id_String" nullable="true"/>
-        <mapperTableEntries name="GRP_SIZE" expression="row2.GRP_SIZE " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="MASTER" expression="row2.MASTER " type="id_Boolean" nullable="true"/>
-        <mapperTableEntries name="SCORE" expression="row2.SCORE " type="id_Double" nullable="true"/>
-        <mapperTableEntries name="GRP_QUALITY" expression="row2.GRP_QUALITY " type="id_Double" nullable="true"/>
+      <outputTables sizeState="INTERMEDIATE" name="Families" expressionFilter="row3.GRP_SIZE !=1" activateExpressionFilter="true">
+        <mapperTableEntries name="Id" expression="row3.Id " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="Nom" expression="row3.Nom " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Prenom" expression="row3.Prenom " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Num_Rue" expression="row3.Num_Rue " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="Nom_Rue" expression="row3.Nom_Rue " type="id_String" nullable="true"/>
+        <mapperTableEntries name="CodePostal" expression="row3.CodePostal " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="Ville" expression="row3.Ville " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Pays" expression="row3.Pays " type="id_String" nullable="true"/>
+        <mapperTableEntries name="GID" expression="row3.GID " type="id_String" nullable="true"/>
+        <mapperTableEntries name="GRP_SIZE" expression="row3.GRP_SIZE " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="MASTER" expression="row3.MASTER " type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="SCORE" expression="row3.SCORE " type="id_Double" nullable="true"/>
+        <mapperTableEntries name="GRP_QUALITY" expression="row3.GRP_QUALITY " type="id_Double" nullable="true"/>
       </outputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row2" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="row3" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="Id" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="Nom" type="id_String" nullable="true"/>
         <mapperTableEntries name="Prenom" type="id_String" nullable="true"/>
@@ -455,6 +548,8 @@
         <mapperTableEntries name="MASTER" type="id_Boolean" nullable="true"/>
         <mapperTableEntries name="SCORE" type="id_Double" nullable="true"/>
         <mapperTableEntries name="GRP_QUALITY" type="id_Double" nullable="true"/>
+        <mapperTableEntries name="SURVIVOR" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="CONFLICT" type="id_String" nullable="true"/>
       </inputTables>
     </nodeData>
   </node>
@@ -586,9 +681,13 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tMatchGroup_1" offsetLabelX="0" offsetLabelY="0" source="tMatchGroup_1" target="tMap_1">
+  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tMatchGroup_1" offsetLabelX="0" offsetLabelY="0" source="tMatchGroup_1" target="tRuleSurvivorship_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tRuleSurvivorship_1" offsetLabelX="0" offsetLabelY="0" source="tRuleSurvivorship_1" target="tMap_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row3" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="UniqueValue" lineStyle="0" metaname="UniqueValue" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_1" target="tFileOutputDelimited_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
