@@ -816,6 +816,7 @@
       <relatedItems xmi:id="_SNMspOjmEeaEtdzMA2lQrg" id="_IhAUIOjmEeaEtdzMA2lQrg" version="Latest" type="survivorshipRuleRelation"/>
       <relatedItems xmi:id="_SNMspejmEeaEtdzMA2lQrg" id="_Hx9c0OjmEeaEtdzMA2lQrg" version="Latest" type="survivorshipRuleRelation"/>
     </ItemsRelations>
+    <deletedFolders>process/tUniserv</deletedFolders>
     <migrationTask xmi:id="_SUvmQOi-EeaEtdzMA2lQrg" id="org.talend.repository.localprovider.RemoveRoutineFolderTask" breaks="5.1.1" version="5.1.2" status="noimpact"/>
     <migrationTask xmi:id="_SUvmQei-EeaEtdzMA2lQrg" id="org.talend.repository.localprovider.model.migration.ChangeXmiSerialization" breaks="5.1.1" version="5.1.2" status="noimpact"/>
     <migrationTask xmi:id="_SUvmQui-EeaEtdzMA2lQrg" id="org.talend.repository.model.migration.CleanFoldersMigrationTask" breaks="5.1.1" version="5.1.2" status="ok"/>
